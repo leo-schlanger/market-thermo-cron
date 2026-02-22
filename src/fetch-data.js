@@ -262,7 +262,7 @@ async function main() {
     // Meta
     meta: {
       timestamp: new Date().toISOString(),
-      updatedAt: new Date().toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' }),
+      updatedAt: new Date().toLocaleString('en-US', { timeZone: 'Europe/Lisbon' }),
       source: 'GitHub Actions Cron',
       apis: {
         fearGreed: fearGreed ? 'OK' : 'ERROR',
