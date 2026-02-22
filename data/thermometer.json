@@ -7,68 +7,26 @@
       "signal": "BUY"
     },
     "vix": {
-      "value": null,
-      "source": "API_KEY_REQUIRED"
+      "value": 20.23,
+      "zone": "ELEVATED",
+      "signal": "NEUTRAL",
+      "source": "FRED"
     },
     "dxy": {
-      "value": null,
-      "source": "API_KEY_REQUIRED"
+      "value": 117.5258,
+      "zone": "STRONG",
+      "impact": "Pressures BTC and gold",
+      "source": "FRED"
     },
-    "bitcoin": {
-      "symbol": "BTC",
-      "price": 67736.01,
-      "priceFormatted": "$67,736",
-      "change24h": -1.324,
-      "changeFormatted": "-1.32%",
-      "high24h": 68658.5,
-      "low24h": 67303.5,
-      "volume24h": 533559506.4512536,
-      "sentiment": "NEUTRAL"
-    },
-    "fundingRate": {
-      "rate": 4.2e-7,
-      "ratePercent": 0.000042,
-      "rateFormatted": "+0.0000%",
-      "signal": "NEUTRAL",
-      "interpretation": "Market balanced"
-    }
+    "bitcoin": null,
+    "fundingRate": null
   },
   "crypto": {
-    "BTC": {
-      "symbol": "BTC",
-      "price": 67736.01,
-      "priceFormatted": "$67,736",
-      "change24h": -1.324,
-      "changeFormatted": "-1.32%",
-      "high24h": 68658.5,
-      "low24h": 67303.5,
-      "volume24h": 533559506.4512536,
-      "sentiment": "NEUTRAL"
-    },
-    "ETH": {
-      "symbol": "ETH",
-      "price": 1956.24,
-      "priceFormatted": "$1,956",
-      "change24h": -1.689,
-      "changeFormatted": "-1.69%",
-      "high24h": 1995.31,
-      "low24h": 1943.53,
-      "volume24h": 324831351.516631,
-      "sentiment": "NEUTRAL"
-    },
-    "SOL": {
-      "symbol": "SOL",
-      "price": 83.55,
-      "priceFormatted": "$83.55",
-      "change24h": -3.589,
-      "changeFormatted": "-3.59%",
-      "high24h": 86.72,
-      "low24h": 82.98,
-      "volume24h": 158126012.68118,
-      "sentiment": "BEARISH"
-    },
+    "BTC": null,
+    "ETH": null,
+    "SOL": null,
     "global": {
-      "totalMarketCap": 2391440211519.9585,
+      "totalMarketCap": 2391395208445.918,
       "totalMarketCapFormatted": "$2.39T",
       "btcDominance": "56.6",
       "ethDominance": "9.9",
@@ -76,10 +34,7 @@
     }
   },
   "commodities": {
-    "gold": {
-      "price": null,
-      "source": "API_KEY_REQUIRED"
-    }
+    "gold": null
   },
   "alerts": [
     {
@@ -90,15 +45,15 @@
     }
   ],
   "meta": {
-    "timestamp": "2026-02-22T15:50:40.286Z",
-    "updatedAt": "2/22/2026, 3:50:40 PM",
+    "timestamp": "2026-02-22T15:54:22.000Z",
+    "updatedAt": "2/22/2026, 3:54:22 PM",
     "source": "GitHub Actions Cron",
     "apis": {
       "fearGreed": "OK",
-      "binance": "OK",
+      "binance": "ERROR",
       "coingecko": "OK",
-      "gold": "API_KEY_REQUIRED",
-      "fred": "API_KEY_REQUIRED"
+      "gold": "ERROR",
+      "fred": "OK"
     }
   }
 }
