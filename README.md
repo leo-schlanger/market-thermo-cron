@@ -13,13 +13,13 @@ https://raw.githubusercontent.com/YOUR_USERNAME/market-thermo-cron/main/data/the
 
 | Indicator | Source | Update |
 |-----------|--------|--------|
-| Fear & Greed Index | Alternative.me | Every 15min |
-| BTC, ETH, SOL | Binance | Every 15min |
-| Funding Rate | Binance Futures | Every 15min |
-| Global Market Cap | CoinGecko | Every 15min |
-| VIX | FRED* | Every 15min |
-| DXY | FRED* | Every 15min |
-| Gold | GoldAPI* | Every 15min |
+| Fear & Greed Index | Alternative.me | Every 2h |
+| BTC, ETH, SOL | Binance | Every 2h |
+| Funding Rate | Binance Futures | Every 2h |
+| Global Market Cap | CoinGecko | Every 2h |
+| VIX | FRED* | Every 2h |
+| DXY | FRED* | Every 2h |
+| Gold | GoldAPI* | Every 2h |
 
 *Requires API key configured in secrets
 
