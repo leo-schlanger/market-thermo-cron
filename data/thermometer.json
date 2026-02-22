@@ -3,7 +3,6 @@
     "fearGreed": {
       "value": 9,
       "classification": "Extreme Fear",
-      "timestamp": "1771718400",
       "signal": "BUY"
     },
     "vix": {
@@ -18,23 +17,58 @@
       "impact": "Pressures BTC and gold",
       "source": "FRED"
     },
-    "bitcoin": null,
-    "fundingRate": null
+    "bitcoin": {
+      "symbol": "BTC",
+      "price": 67682,
+      "priceFormatted": "$67,682",
+      "change24h": -1.33,
+      "changeFormatted": "-1.33%",
+      "marketCap": 1353523445098.5107,
+      "sentiment": "NEUTRAL"
+    },
+    "fundingRate": {
+      "rate": 4.2e-7,
+      "ratePercent": 0.000042,
+      "rateFormatted": "+0.0000%",
+      "signal": "NEUTRAL",
+      "interpretation": "Market balanced"
+    }
   },
   "crypto": {
-    "BTC": null,
-    "ETH": null,
-    "SOL": null,
+    "BTC": {
+      "symbol": "BTC",
+      "price": 67682,
+      "priceFormatted": "$67,682",
+      "change24h": -1.33,
+      "changeFormatted": "-1.33%",
+      "marketCap": 1353523445098.5107,
+      "sentiment": "NEUTRAL"
+    },
+    "ETH": {
+      "symbol": "ETH",
+      "price": 1954.49,
+      "priceFormatted": "$1,954",
+      "change24h": -1.73,
+      "changeFormatted": "-1.73%",
+      "marketCap": 235971232776.56662,
+      "sentiment": "NEUTRAL"
+    },
+    "SOL": {
+      "symbol": "SOL",
+      "price": 83.55,
+      "priceFormatted": "$83.55",
+      "change24h": -3.51,
+      "changeFormatted": "-3.51%",
+      "marketCap": 47496587094.06388,
+      "sentiment": "BEARISH"
+    },
     "global": {
-      "totalMarketCap": 2391395208445.918,
+      "totalMarketCap": 2390632646800.7188,
       "totalMarketCapFormatted": "$2.39T",
       "btcDominance": "56.6",
       "ethDominance": "9.9",
-      "marketCapChange24h": "-1.47"
+      "marketCapChange24h": "-1.51"
     }
-  },
-  "commodities": {
-    "gold": null
   },
   "alerts": [
     {
@@ -45,14 +79,14 @@
     }
   ],
   "meta": {
-    "timestamp": "2026-02-22T15:54:22.000Z",
-    "updatedAt": "2/22/2026, 3:54:22 PM",
+    "timestamp": "2026-02-22T15:59:10.046Z",
+    "updatedAt": "2/22/2026, 3:59:10 PM",
     "source": "GitHub Actions Cron",
+    "nextUpdate": "Every hour",
     "apis": {
       "fearGreed": "OK",
-      "binance": "ERROR",
       "coingecko": "OK",
-      "gold": "ERROR",
+      "binance": "OK",
       "fred": "OK"
     }
   }

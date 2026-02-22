@@ -1,48 +1,36 @@
 /**
  * MARKET THERMOMETER - CRON DATA FETCHER
  * Fetches market data and saves to JSON
- * Runs via GitHub Actions
+ * Runs via GitHub Actions (hourly, 24/7 safe)
  */
 
 const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
 
-// APIs configuration
+// All APIs are free and support 24/7 usage (720+ calls/month)
 const APIS = {
   fearGreed: 'https://api.alternative.me/fng/?limit=1',
-  binanceBTC: 'https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT',
-  binanceETH: 'https://api.binance.com/api/v3/ticker/24hr?symbol=ETHUSDT',
-  binanceSOL: 'https://api.binance.com/api/v3/ticker/24hr?symbol=SOLUSDT',
   binanceFunding: 'https://fapi.binance.com/fapi/v1/fundingRate?symbol=BTCUSDT&limit=1',
   coingeckoGlobal: 'https://api.coingecko.com/api/v3/global',
+  coingeckoPrices: 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana&vs_currencies=usd&include_24hr_change=true&include_market_cap=true',
 };
 
-// Optional APIs (require keys)
-const OPTIONAL_APIS = {
-  gold: process.env.GOLD_API_KEY ? {
-    url: 'https://www.goldapi.io/api/XAU/USD',
-    headers: { 'x-access-token': process.env.GOLD_API_KEY }
-  } : null,
-  fred_dxy: process.env.FRED_API_KEY ? {
-    url: `https://api.stlouisfed.org/fred/series/observations?series_id=DTWEXBGS&api_key=${process.env.FRED_API_KEY}&file_type=json&limit=1&sort_order=desc`
-  } : null,
-  fred_vix: process.env.FRED_API_KEY ? {
-    url: `https://api.stlouisfed.org/fred/series/observations?series_id=VIXCLS&api_key=${process.env.FRED_API_KEY}&file_type=json&limit=1&sort_order=desc`
-  } : null,
-};
+// FRED API (120 calls/min - very generous)
+const FRED_API_KEY = process.env.FRED_API_KEY;
+const FRED_APIS = FRED_API_KEY ? {
+  vix: `https://api.stlouisfed.org/fred/series/observations?series_id=VIXCLS&api_key=${FRED_API_KEY}&file_type=json&limit=1&sort_order=desc`,
+  dxy: `https://api.stlouisfed.org/fred/series/observations?series_id=DTWEXBGS&api_key=${FRED_API_KEY}&file_type=json&limit=1&sort_order=desc`,
+} : null;
 
-async function fetchWithRetry(url, options = {}, retries = 2) {
+async function fetchWithRetry(url, retries = 2) {
   for (let i = 0; i <= retries; i++) {
     try {
-      const response = await axios.get(url, {
-        timeout: 10000,
-        ...options
-      });
+      const response = await axios.get(url, { timeout: 10000 });
       return response.data;
     } catch (error) {
       if (i === retries) {
-        console.error(`Failed to fetch ${url}:`, error.message);
+        console.error(`Failed: ${url.split('?')[0]}`, error.message);
         return null;
       }
       await new Promise(r => setTimeout(r, 1000));
@@ -60,29 +48,30 @@ async function fetchFearGreed() {
   return {
     value,
     classification: fg.value_classification,
-    timestamp: fg.timestamp,
     signal: value <= 25 ? 'BUY' : value >= 75 ? 'SELL' : 'NEUTRAL'
   };
 }
 
-async function fetchBinanceTicker(symbol) {
-  const url = `https://api.binance.com/api/v3/ticker/24hr?symbol=${symbol}USDT`;
-  const data = await fetchWithRetry(url);
+async function fetchCryptoPrices() {
+  const data = await fetchWithRetry(APIS.coingeckoPrices);
   if (!data) return null;
 
-  const price = parseFloat(data.lastPrice);
-  const change = parseFloat(data.priceChangePercent);
+  const format = (coin, symbol) => ({
+    symbol,
+    price: coin.usd,
+    priceFormatted: coin.usd > 1000
+      ? `$${coin.usd.toLocaleString('en-US', {maximumFractionDigits: 0})}`
+      : `$${coin.usd.toFixed(2)}`,
+    change24h: parseFloat(coin.usd_24h_change?.toFixed(2)) || 0,
+    changeFormatted: `${coin.usd_24h_change >= 0 ? '+' : ''}${coin.usd_24h_change?.toFixed(2) || 0}%`,
+    marketCap: coin.usd_market_cap,
+    sentiment: coin.usd_24h_change > 3 ? 'BULLISH' : coin.usd_24h_change < -3 ? 'BEARISH' : 'NEUTRAL'
+  });
 
   return {
-    symbol,
-    price,
-    priceFormatted: price > 1000 ? `$${price.toLocaleString('en-US', {maximumFractionDigits: 0})}` : `$${price.toFixed(2)}`,
-    change24h: change,
-    changeFormatted: `${change >= 0 ? '+' : ''}${change.toFixed(2)}%`,
-    high24h: parseFloat(data.highPrice),
-    low24h: parseFloat(data.lowPrice),
-    volume24h: parseFloat(data.quoteVolume),
-    sentiment: change > 3 ? 'BULLISH' : change < -3 ? 'BEARISH' : 'NEUTRAL'
+    BTC: data.bitcoin ? format(data.bitcoin, 'BTC') : null,
+    ETH: data.ethereum ? format(data.ethereum, 'ETH') : null,
+    SOL: data.solana ? format(data.solana, 'SOL') : null,
   };
 }
 
@@ -117,29 +106,11 @@ async function fetchGlobalCrypto() {
   };
 }
 
-async function fetchGold() {
-  if (!OPTIONAL_APIS.gold) return { price: null, source: 'API_KEY_REQUIRED' };
-
-  const data = await fetchWithRetry(OPTIONAL_APIS.gold.url, {
-    headers: OPTIONAL_APIS.gold.headers
-  });
-
-  if (!data?.price) return null;
-
-  return {
-    price: data.price,
-    priceFormatted: `$${data.price.toLocaleString('en-US', {maximumFractionDigits: 2})}`,
-    change: data.ch,
-    changePercent: data.chp,
-    source: 'GoldAPI'
-  };
-}
-
 async function fetchFredIndicator(type) {
-  const api = type === 'vix' ? OPTIONAL_APIS.fred_vix : OPTIONAL_APIS.fred_dxy;
-  if (!api) return { value: null, source: 'API_KEY_REQUIRED' };
+  if (!FRED_APIS) return { value: null, source: 'API_KEY_REQUIRED' };
 
-  const data = await fetchWithRetry(api.url);
+  const url = type === 'vix' ? FRED_APIS.vix : FRED_APIS.dxy;
+  const data = await fetchWithRetry(url);
   if (!data?.observations?.[0]) return null;
 
   const value = parseFloat(data.observations[0].value);
@@ -164,7 +135,6 @@ async function fetchFredIndicator(type) {
 function generateAlerts(data) {
   const alerts = [];
 
-  // Fear & Greed
   if (data.fearGreed?.value <= 20) {
     alerts.push({
       level: 'critical',
@@ -181,7 +151,6 @@ function generateAlerts(data) {
     });
   }
 
-  // VIX
   if (data.vix?.value > 30) {
     alerts.push({
       level: 'critical',
@@ -191,7 +160,6 @@ function generateAlerts(data) {
     });
   }
 
-  // BTC movement
   if (data.crypto?.BTC && Math.abs(data.crypto.BTC.change24h) > 8) {
     alerts.push({
       level: 'warning',
@@ -201,7 +169,6 @@ function generateAlerts(data) {
     });
   }
 
-  // Funding Rate
   if (data.fundingRate?.rate > 0.001) {
     alerts.push({
       level: 'warning',
@@ -220,71 +187,51 @@ function generateAlerts(data) {
 async function main() {
   console.log('Fetching market data...\n');
 
-  // Fetch all data in parallel
-  const [fearGreed, btc, eth, sol, fundingRate, globalCrypto, gold, vix, dxy] = await Promise.all([
+  const [fearGreed, crypto, fundingRate, globalCrypto, vix, dxy] = await Promise.all([
     fetchFearGreed(),
-    fetchBinanceTicker('BTC'),
-    fetchBinanceTicker('ETH'),
-    fetchBinanceTicker('SOL'),
+    fetchCryptoPrices(),
     fetchFundingRate(),
     fetchGlobalCrypto(),
-    fetchGold(),
     fetchFredIndicator('vix'),
     fetchFredIndicator('dxy')
   ]);
 
   const thermometer = {
-    // Main dashboard
     dashboard: {
       fearGreed,
       vix,
       dxy,
-      bitcoin: btc,
+      bitcoin: crypto?.BTC,
       fundingRate
     },
-
-    // Crypto
     crypto: {
-      BTC: btc,
-      ETH: eth,
-      SOL: sol,
+      ...crypto,
       global: globalCrypto
     },
-
-    // Commodities
-    commodities: {
-      gold
-    },
-
-    // Alerts
-    alerts: generateAlerts({ fearGreed, vix, crypto: { BTC: btc }, fundingRate }),
-
-    // Meta
+    alerts: generateAlerts({ fearGreed, vix, crypto, fundingRate }),
     meta: {
       timestamp: new Date().toISOString(),
       updatedAt: new Date().toLocaleString('en-US', { timeZone: 'Europe/Lisbon' }),
       source: 'GitHub Actions Cron',
+      nextUpdate: 'Every hour',
       apis: {
         fearGreed: fearGreed ? 'OK' : 'ERROR',
-        binance: btc ? 'OK' : 'ERROR',
-        coingecko: globalCrypto ? 'OK' : 'ERROR',
-        gold: gold?.price ? 'OK' : (gold?.source || 'ERROR'),
+        coingecko: crypto ? 'OK' : 'ERROR',
+        binance: fundingRate ? 'OK' : 'ERROR',
         fred: vix?.value ? 'OK' : (vix?.source || 'ERROR')
       }
     }
   };
 
-  // Save to file
   const outputPath = path.join(__dirname, '..', 'data', 'thermometer.json');
   fs.writeFileSync(outputPath, JSON.stringify(thermometer, null, 2));
 
   console.log('Dashboard:');
   console.log(`  Fear & Greed: ${fearGreed?.value || 'N/A'} (${fearGreed?.classification || 'N/A'})`);
-  console.log(`  BTC: ${btc?.priceFormatted || 'N/A'} (${btc?.changeFormatted || 'N/A'})`);
+  console.log(`  BTC: ${crypto?.BTC?.priceFormatted || 'N/A'} (${crypto?.BTC?.changeFormatted || 'N/A'})`);
   console.log(`  VIX: ${vix?.value?.toFixed(1) || 'N/A'} (${vix?.zone || 'N/A'})`);
   console.log(`  DXY: ${dxy?.value?.toFixed(2) || 'N/A'} (${dxy?.zone || 'N/A'})`);
   console.log(`  Funding: ${fundingRate?.rateFormatted || 'N/A'}`);
-  console.log(`  Gold: ${gold?.priceFormatted || 'N/A'}`);
   console.log(`\nAlerts: ${thermometer.alerts.length}`);
   thermometer.alerts.forEach(a => console.log(`  [${a.level.toUpperCase()}] ${a.title}`));
   console.log(`\nSaved to: ${outputPath}`);

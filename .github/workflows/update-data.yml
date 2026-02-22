@@ -2,8 +2,8 @@ name: Update Market Data
 
 on:
   schedule:
-    # Runs every 2 hours (12 calls/day - respects GoldAPI limit of ~16/day)
-    - cron: '0 */2 * * *'
+    # Runs every hour (720 calls/month - all APIs support this)
+    - cron: '0 * * * *'
   workflow_dispatch: # Allows manual trigger
 
 permissions:
@@ -28,7 +28,6 @@ jobs:
 
       - name: Fetch market data
         env:
-          GOLD_API_KEY: ${{ secrets.GOLD_API_KEY }}
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: npm run update
 
