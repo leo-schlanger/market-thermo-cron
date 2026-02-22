@@ -15,7 +15,6 @@ https://raw.githubusercontent.com/leo-schlanger/market-thermo-cron/main/data/the
 |-----------|--------|-------|--------|
 | Fear & Greed Index | Alternative.me | Unlimited | Hourly |
 | BTC, ETH, SOL | CoinGecko | 10k/month | Hourly |
-| Funding Rate | Binance | Unlimited | Hourly |
 | Global Market Cap | CoinGecko | 10k/month | Hourly |
 | VIX | FRED | 120/min | Hourly |
 | DXY | FRED | 120/min | Hourly |
@@ -44,8 +43,7 @@ FRED_API_KEY=your_key npm run update
     "fearGreed": { "value": 45, "signal": "NEUTRAL" },
     "bitcoin": { "price": 95000, "change24h": 2.5 },
     "vix": { "value": 18.5, "zone": "NORMAL" },
-    "dxy": { "value": 103.5, "zone": "NEUTRAL" },
-    "fundingRate": { "rate": 0.0001, "signal": "NEUTRAL" }
+    "dxy": { "value": 103.5, "zone": "NEUTRAL" }
   },
   "crypto": { "BTC": {...}, "ETH": {...}, "SOL": {...} },
   "alerts": [...],

@@ -11,7 +11,6 @@ const path = require('path');
 // All APIs are free and support 24/7 usage (720+ calls/month)
 const APIS = {
   fearGreed: 'https://api.alternative.me/fng/?limit=1',
-  binanceFunding: 'https://fapi.binance.com/fapi/v1/fundingRate?symbol=BTCUSDT&limit=1',
   coingeckoGlobal: 'https://api.coingecko.com/api/v3/global',
   coingeckoPrices: 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana&vs_currencies=usd&include_24hr_change=true&include_market_cap=true',
 };
@@ -72,24 +71,6 @@ async function fetchCryptoPrices() {
     BTC: data.bitcoin ? format(data.bitcoin, 'BTC') : null,
     ETH: data.ethereum ? format(data.ethereum, 'ETH') : null,
     SOL: data.solana ? format(data.solana, 'SOL') : null,
-  };
-}
-
-async function fetchFundingRate() {
-  const data = await fetchWithRetry(APIS.binanceFunding);
-  if (!data?.[0]) return null;
-
-  const rate = parseFloat(data[0].fundingRate);
-  const ratePercent = rate * 100;
-
-  return {
-    rate,
-    ratePercent,
-    rateFormatted: `${ratePercent >= 0 ? '+' : ''}${ratePercent.toFixed(4)}%`,
-    signal: rate > 0.0005 ? 'OVERHEATED' : rate < -0.0005 ? 'OVERSOLD' : 'NEUTRAL',
-    interpretation: rate > 0.001 ? 'Longs paying high - correction risk' :
-                    rate < -0.001 ? 'Shorts paying - possible reversal' :
-                    'Market balanced'
   };
 }
 
@@ -169,15 +150,6 @@ function generateAlerts(data) {
     });
   }
 
-  if (data.fundingRate?.rate > 0.001) {
-    alerts.push({
-      level: 'warning',
-      type: 'funding',
-      title: 'High Funding Rate',
-      message: `Funding at ${data.fundingRate.rateFormatted}. Longs paying high.`
-    });
-  }
-
   return alerts.sort((a, b) => {
     const order = { critical: 0, warning: 1, info: 2 };
     return order[a.level] - order[b.level];
@@ -187,10 +159,9 @@ function generateAlerts(data) {
 async function main() {
   console.log('Fetching market data...\n');
 
-  const [fearGreed, crypto, fundingRate, globalCrypto, vix, dxy] = await Promise.all([
+  const [fearGreed, crypto, globalCrypto, vix, dxy] = await Promise.all([
     fetchFearGreed(),
     fetchCryptoPrices(),
-    fetchFundingRate(),
     fetchGlobalCrypto(),
     fetchFredIndicator('vix'),
     fetchFredIndicator('dxy')
@@ -201,14 +172,13 @@ async function main() {
       fearGreed,
       vix,
       dxy,
-      bitcoin: crypto?.BTC,
-      fundingRate
+      bitcoin: crypto?.BTC
     },
     crypto: {
       ...crypto,
       global: globalCrypto
     },
-    alerts: generateAlerts({ fearGreed, vix, crypto, fundingRate }),
+    alerts: generateAlerts({ fearGreed, vix, crypto }),
     meta: {
       timestamp: new Date().toISOString(),
       updatedAt: new Date().toLocaleString('en-US', { timeZone: 'Europe/Lisbon' }),
@@ -217,7 +187,6 @@ async function main() {
       apis: {
         fearGreed: fearGreed ? 'OK' : 'ERROR',
         coingecko: crypto ? 'OK' : 'ERROR',
-        binance: fundingRate ? 'OK' : 'ERROR',
         fred: vix?.value ? 'OK' : (vix?.source || 'ERROR')
       }
     }
@@ -231,7 +200,6 @@ async function main() {
   console.log(`  BTC: ${crypto?.BTC?.priceFormatted || 'N/A'} (${crypto?.BTC?.changeFormatted || 'N/A'})`);
   console.log(`  VIX: ${vix?.value?.toFixed(1) || 'N/A'} (${vix?.zone || 'N/A'})`);
   console.log(`  DXY: ${dxy?.value?.toFixed(2) || 'N/A'} (${dxy?.zone || 'N/A'})`);
-  console.log(`  Funding: ${fundingRate?.rateFormatted || 'N/A'}`);
   console.log(`\nAlerts: ${thermometer.alerts.length}`);
   thermometer.alerts.forEach(a => console.log(`  [${a.level.toUpperCase()}] ${a.title}`));
   console.log(`\nSaved to: ${outputPath}`);
