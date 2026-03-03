@@ -1,7 +1,7 @@
 {
   "dashboard": {
     "fearGreed": {
-      "value": 10,
+      "value": 14,
       "classification": "Extreme Fear",
       "signal": "BUY"
     },
@@ -16,69 +16,27 @@
       "zone": "STRONG",
       "impact": "Pressures BTC and gold",
       "source": "FRED"
-    },
-    "bitcoin": {
-      "symbol": "BTC",
-      "price": 69305,
-      "priceFormatted": "$69,305",
-      "change24h": 5.24,
-      "changeFormatted": "+5.24%",
-      "marketCap": 1386558704082.1614,
-      "sentiment": "BULLISH"
     }
   },
   "crypto": {
-    "BTC": {
-      "symbol": "BTC",
-      "price": 69305,
-      "priceFormatted": "$69,305",
-      "change24h": 5.24,
-      "changeFormatted": "+5.24%",
-      "marketCap": 1386558704082.1614,
-      "sentiment": "BULLISH"
-    },
-    "ETH": {
-      "symbol": "ETH",
-      "price": 2050.04,
-      "priceFormatted": "$2,050",
-      "change24h": 5.74,
-      "changeFormatted": "+5.74%",
-      "marketCap": 247251710475.5522,
-      "sentiment": "BULLISH"
-    },
-    "SOL": {
-      "symbol": "SOL",
-      "price": 87.79,
-      "priceFormatted": "$87.79",
-      "change24h": 5,
-      "changeFormatted": "+5.00%",
-      "marketCap": 50013757651.870155,
-      "sentiment": "BULLISH"
-    },
-    "global": {
-      "totalMarketCap": 2446640154114.0864,
-      "totalMarketCapFormatted": "$2.45T",
-      "btcDominance": "56.7",
-      "ethDominance": "10.1",
-      "marketCapChange24h": "4.38"
-    }
+    "global": null
   },
   "alerts": [
     {
       "level": "critical",
       "type": "fear_greed",
       "title": "Extreme Fear",
-      "message": "Fear & Greed at 10. Historically precedes reversals."
+      "message": "Fear & Greed at 14. Historically precedes reversals."
     }
   ],
   "meta": {
-    "timestamp": "2026-03-02T23:13:16.982Z",
-    "updatedAt": "3/2/2026, 11:13:16 PM",
+    "timestamp": "2026-03-03T00:58:36.735Z",
+    "updatedAt": "3/3/2026, 12:58:36 AM",
     "source": "GitHub Actions Cron",
     "nextUpdate": "Every hour",
     "apis": {
       "fearGreed": "OK",
-      "coingecko": "OK",
+      "coingecko": "ERROR",
       "fred": "OK"
     }
   }
