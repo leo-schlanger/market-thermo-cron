@@ -19,48 +19,48 @@
     },
     "bitcoin": {
       "symbol": "BTC",
-      "price": 72307,
-      "priceFormatted": "$72,307",
-      "change24h": 8.39,
-      "changeFormatted": "+8.39%",
-      "marketCap": 1444982692155.7627,
+      "price": 72812,
+      "priceFormatted": "$72,812",
+      "change24h": 5.83,
+      "changeFormatted": "+5.83%",
+      "marketCap": 1455847908780.1353,
       "sentiment": "BULLISH"
     }
   },
   "crypto": {
     "BTC": {
       "symbol": "BTC",
-      "price": 72307,
-      "priceFormatted": "$72,307",
-      "change24h": 8.39,
-      "changeFormatted": "+8.39%",
-      "marketCap": 1444982692155.7627,
+      "price": 72812,
+      "priceFormatted": "$72,812",
+      "change24h": 5.83,
+      "changeFormatted": "+5.83%",
+      "marketCap": 1455847908780.1353,
       "sentiment": "BULLISH"
     },
     "ETH": {
       "symbol": "ETH",
-      "price": 2101.56,
-      "priceFormatted": "$2,102",
-      "change24h": 8.17,
-      "changeFormatted": "+8.17%",
-      "marketCap": 253484454490.21442,
+      "price": 2138.84,
+      "priceFormatted": "$2,139",
+      "change24h": 6.64,
+      "changeFormatted": "+6.64%",
+      "marketCap": 258124079736.8929,
       "sentiment": "BULLISH"
     },
     "SOL": {
       "symbol": "SOL",
-      "price": 91.35,
-      "priceFormatted": "$91.35",
-      "change24h": 9.61,
-      "changeFormatted": "+9.61%",
-      "marketCap": 52030060885.56071,
+      "price": 91.44,
+      "priceFormatted": "$91.44",
+      "change24h": 5.49,
+      "changeFormatted": "+5.49%",
+      "marketCap": 52110169607.511826,
       "sentiment": "BULLISH"
     },
     "global": {
-      "totalMarketCap": 2526620028203.1323,
-      "totalMarketCapFormatted": "$2.53T",
-      "btcDominance": "57.4",
-      "ethDominance": "10.1",
-      "marketCapChange24h": "5.68"
+      "totalMarketCap": 2539978126519.5728,
+      "totalMarketCapFormatted": "$2.54T",
+      "btcDominance": "57.3",
+      "ethDominance": "10.2",
+      "marketCapChange24h": "5.41"
     }
   },
   "alerts": [
@@ -69,17 +69,11 @@
       "type": "fear_greed",
       "title": "Extreme Fear",
       "message": "Fear & Greed at 10. Historically precedes reversals."
-    },
-    {
-      "level": "warning",
-      "type": "btc_volatility",
-      "title": "High BTC Volatility",
-      "message": "Bitcoin up 8.4% in 24h."
     }
   ],
   "meta": {
-    "timestamp": "2026-03-04T15:26:57.927Z",
-    "updatedAt": "3/4/2026, 3:26:57 PM",
+    "timestamp": "2026-03-04T16:27:30.830Z",
+    "updatedAt": "3/4/2026, 4:27:30 PM",
     "source": "GitHub Actions Cron",
     "nextUpdate": "Every hour",
     "apis": {
