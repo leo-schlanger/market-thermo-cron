@@ -12,55 +12,55 @@
       "source": "FRED"
     },
     "dxy": {
-      "value": 120.5518,
+      "value": 120.2757,
       "zone": "STRONG",
       "impact": "Pressures BTC and gold",
       "source": "FRED"
     },
     "bitcoin": {
       "symbol": "BTC",
-      "price": 70942,
-      "priceFormatted": "$70,942",
-      "change24h": 3.78,
-      "changeFormatted": "+3.78%",
-      "marketCap": 1419260490625.5027,
+      "price": 70770,
+      "priceFormatted": "$70,770",
+      "change24h": 3.46,
+      "changeFormatted": "+3.46%",
+      "marketCap": 1415029396307.1902,
       "sentiment": "BULLISH"
     }
   },
   "crypto": {
     "BTC": {
       "symbol": "BTC",
-      "price": 70942,
-      "priceFormatted": "$70,942",
-      "change24h": 3.78,
-      "changeFormatted": "+3.78%",
-      "marketCap": 1419260490625.5027,
+      "price": 70770,
+      "priceFormatted": "$70,770",
+      "change24h": 3.46,
+      "changeFormatted": "+3.46%",
+      "marketCap": 1415029396307.1902,
       "sentiment": "BULLISH"
     },
     "ETH": {
       "symbol": "ETH",
-      "price": 2162.51,
-      "priceFormatted": "$2,163",
-      "change24h": 4.76,
-      "changeFormatted": "+4.76%",
-      "marketCap": 261034190125.69684,
+      "price": 2160.31,
+      "priceFormatted": "$2,160",
+      "change24h": 4.44,
+      "changeFormatted": "+4.44%",
+      "marketCap": 260649796525.27478,
       "sentiment": "BULLISH"
     },
     "SOL": {
       "symbol": "SOL",
       "price": 91.63,
       "priceFormatted": "$91.63",
-      "change24h": 5.5,
-      "changeFormatted": "+5.50%",
-      "marketCap": 52432704121.90429,
+      "change24h": 5.26,
+      "changeFormatted": "+5.26%",
+      "marketCap": 52413440229.75928,
       "sentiment": "BULLISH"
     },
     "global": {
-      "totalMarketCap": 2509185123599.4976,
-      "totalMarketCapFormatted": "$2.51T",
+      "totalMarketCap": 2501846542382.99,
+      "totalMarketCapFormatted": "$2.50T",
       "btcDominance": "56.6",
       "ethDominance": "10.4",
-      "marketCapChange24h": "3.40"
+      "marketCapChange24h": "3.10"
     }
   },
   "alerts": [
@@ -72,8 +72,8 @@
     }
   ],
   "meta": {
-    "timestamp": "2026-03-23T19:38:27.057Z",
-    "updatedAt": "3/23/2026, 7:38:27 PM",
+    "timestamp": "2026-03-23T20:25:36.483Z",
+    "updatedAt": "3/23/2026, 8:25:36 PM",
     "source": "GitHub Actions Cron",
     "nextUpdate": "Every hour",
     "apis": {
