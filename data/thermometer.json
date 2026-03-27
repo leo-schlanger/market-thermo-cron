@@ -19,48 +19,48 @@
     },
     "bitcoin": {
       "symbol": "BTC",
-      "price": 68225,
-      "priceFormatted": "$68,225",
-      "change24h": -2.3,
-      "changeFormatted": "-2.30%",
-      "marketCap": 1364378903169.6985,
+      "price": 67764,
+      "priceFormatted": "$67,764",
+      "change24h": -2.45,
+      "changeFormatted": "-2.45%",
+      "marketCap": 1355445102358.3403,
       "sentiment": "NEUTRAL"
     }
   },
   "crypto": {
     "BTC": {
       "symbol": "BTC",
-      "price": 68225,
-      "priceFormatted": "$68,225",
-      "change24h": -2.3,
-      "changeFormatted": "-2.30%",
-      "marketCap": 1364378903169.6985,
+      "price": 67764,
+      "priceFormatted": "$67,764",
+      "change24h": -2.45,
+      "changeFormatted": "-2.45%",
+      "marketCap": 1355445102358.3403,
       "sentiment": "NEUTRAL"
     },
     "ETH": {
       "symbol": "ETH",
-      "price": 2055.79,
-      "priceFormatted": "$2,056",
-      "change24h": -2.83,
-      "changeFormatted": "-2.83%",
-      "marketCap": 248096149777.89764,
+      "price": 2045.51,
+      "priceFormatted": "$2,046",
+      "change24h": -1.78,
+      "changeFormatted": "-1.78%",
+      "marketCap": 246893655982.2437,
       "sentiment": "NEUTRAL"
     },
     "SOL": {
       "symbol": "SOL",
-      "price": 85.78,
-      "priceFormatted": "$85.78",
-      "change24h": -3.29,
-      "changeFormatted": "-3.29%",
-      "marketCap": 49097946426.189354,
+      "price": 85,
+      "priceFormatted": "$85.00",
+      "change24h": -3.79,
+      "changeFormatted": "-3.79%",
+      "marketCap": 48655990924.78995,
       "sentiment": "BEARISH"
     },
     "global": {
-      "totalMarketCap": 2426869322195.746,
-      "totalMarketCapFormatted": "$2.43T",
-      "btcDominance": "56.3",
+      "totalMarketCap": 2409074721984.41,
+      "totalMarketCapFormatted": "$2.41T",
+      "btcDominance": "56.2",
       "ethDominance": "10.2",
-      "marketCapChange24h": "-2.05"
+      "marketCapChange24h": "-2.11"
     }
   },
   "alerts": [
@@ -72,8 +72,8 @@
     }
   ],
   "meta": {
-    "timestamp": "2026-03-27T08:35:39.110Z",
-    "updatedAt": "3/27/2026, 8:35:39 AM",
+    "timestamp": "2026-03-27T09:40:52.082Z",
+    "updatedAt": "3/27/2026, 9:40:52 AM",
     "source": "GitHub Actions Cron",
     "nextUpdate": "Every hour",
     "apis": {
