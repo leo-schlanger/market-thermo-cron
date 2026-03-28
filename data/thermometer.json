@@ -21,9 +21,9 @@
       "symbol": "BTC",
       "price": 66397,
       "priceFormatted": "$66,397",
-      "change24h": -3.37,
-      "changeFormatted": "-3.37%",
-      "marketCap": 1328040445853.131,
+      "change24h": -3.28,
+      "changeFormatted": "-3.28%",
+      "marketCap": 1328485129127.4314,
       "sentiment": "BEARISH"
     }
   },
@@ -32,35 +32,35 @@
       "symbol": "BTC",
       "price": 66397,
       "priceFormatted": "$66,397",
-      "change24h": -3.37,
-      "changeFormatted": "-3.37%",
-      "marketCap": 1328040445853.131,
+      "change24h": -3.28,
+      "changeFormatted": "-3.28%",
+      "marketCap": 1328485129127.4314,
       "sentiment": "BEARISH"
     },
     "ETH": {
       "symbol": "ETH",
-      "price": 2001.49,
-      "priceFormatted": "$2,001",
-      "change24h": -3.03,
-      "changeFormatted": "-3.03%",
-      "marketCap": 241512731441.0275,
+      "price": 2003.3,
+      "priceFormatted": "$2,003",
+      "change24h": -3.01,
+      "changeFormatted": "-3.01%",
+      "marketCap": 241819981417.731,
       "sentiment": "BEARISH"
     },
     "SOL": {
       "symbol": "SOL",
-      "price": 83.09,
-      "priceFormatted": "$83.09",
-      "change24h": -3.61,
-      "changeFormatted": "-3.61%",
-      "marketCap": 47555528638.07954,
+      "price": 83.37,
+      "priceFormatted": "$83.37",
+      "change24h": -3.21,
+      "changeFormatted": "-3.21%",
+      "marketCap": 47723871488.92237,
       "sentiment": "BEARISH"
     },
     "global": {
-      "totalMarketCap": 2371962746338.5107,
+      "totalMarketCap": 2373676854250.1724,
       "totalMarketCapFormatted": "$2.37T",
       "btcDominance": "56.0",
       "ethDominance": "10.2",
-      "marketCapChange24h": "-2.55"
+      "marketCapChange24h": "-2.34"
     }
   },
   "alerts": [
@@ -72,8 +72,8 @@
     }
   ],
   "meta": {
-    "timestamp": "2026-03-28T06:41:13.083Z",
-    "updatedAt": "3/28/2026, 6:41:13 AM",
+    "timestamp": "2026-03-28T07:35:56.484Z",
+    "updatedAt": "3/28/2026, 7:35:56 AM",
     "source": "GitHub Actions Cron",
     "nextUpdate": "Every hour",
     "apis": {
