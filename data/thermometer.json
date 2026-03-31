@@ -6,7 +6,7 @@
       "signal": "BUY"
     },
     "vix": {
-      "value": 31.05,
+      "value": 30.61,
       "zone": "EXTREME",
       "signal": "PANIC",
       "source": "FRED"
@@ -19,48 +19,48 @@
     },
     "bitcoin": {
       "symbol": "BTC",
-      "price": 66824,
-      "priceFormatted": "$66,824",
-      "change24h": -1.46,
-      "changeFormatted": "-1.46%",
-      "marketCap": 1337583948633.7185,
+      "price": 67456,
+      "priceFormatted": "$67,456",
+      "change24h": -0.07,
+      "changeFormatted": "-0.07%",
+      "marketCap": 1348571564743.0457,
       "sentiment": "NEUTRAL"
     }
   },
   "crypto": {
     "BTC": {
       "symbol": "BTC",
-      "price": 66824,
-      "priceFormatted": "$66,824",
-      "change24h": -1.46,
-      "changeFormatted": "-1.46%",
-      "marketCap": 1337583948633.7185,
+      "price": 67456,
+      "priceFormatted": "$67,456",
+      "change24h": -0.07,
+      "changeFormatted": "-0.07%",
+      "marketCap": 1348571564743.0457,
       "sentiment": "NEUTRAL"
     },
     "ETH": {
       "symbol": "ETH",
-      "price": 2053.47,
-      "priceFormatted": "$2,053",
-      "change24h": -0.91,
-      "changeFormatted": "-0.91%",
-      "marketCap": 247904686626.0159,
+      "price": 2083.76,
+      "priceFormatted": "$2,084",
+      "change24h": 1.09,
+      "changeFormatted": "+1.09%",
+      "marketCap": 251291897582.2909,
       "sentiment": "NEUTRAL"
     },
     "SOL": {
       "symbol": "SOL",
-      "price": 80.89,
-      "priceFormatted": "$80.89",
-      "change24h": -3.95,
-      "changeFormatted": "-3.95%",
-      "marketCap": 46308480095.29737,
-      "sentiment": "BEARISH"
+      "price": 81.99,
+      "priceFormatted": "$81.99",
+      "change24h": -2.82,
+      "changeFormatted": "-2.82%",
+      "marketCap": 46897603263.3874,
+      "sentiment": "NEUTRAL"
     },
     "global": {
-      "totalMarketCap": 2379570345438.1577,
-      "totalMarketCapFormatted": "$2.38T",
+      "totalMarketCap": 2399365160436.405,
+      "totalMarketCapFormatted": "$2.40T",
       "btcDominance": "56.1",
       "ethDominance": "10.4",
-      "marketCapChange24h": "-1.59"
+      "marketCapChange24h": "-0.66"
     }
   },
   "alerts": [
@@ -74,12 +74,12 @@
       "level": "critical",
       "type": "vix",
       "title": "Extreme VIX",
-      "message": "VIX at 31.1. Market panic."
+      "message": "VIX at 30.6. Market panic."
     }
   ],
   "meta": {
-    "timestamp": "2026-03-31T12:43:21.866Z",
-    "updatedAt": "3/31/2026, 1:43:21 PM",
+    "timestamp": "2026-03-31T14:19:55.302Z",
+    "updatedAt": "3/31/2026, 3:19:55 PM",
     "source": "GitHub Actions Cron",
     "nextUpdate": "Every hour",
     "apis": {
