@@ -17,9 +17,15 @@ const APIS = {
 
 // FRED API (120 calls/min - very generous)
 const FRED_API_KEY = process.env.FRED_API_KEY;
-const FRED_APIS = FRED_API_KEY ? {
-  vix: `https://api.stlouisfed.org/fred/series/observations?series_id=VIXCLS&api_key=${FRED_API_KEY}&file_type=json&limit=1&sort_order=desc`,
-  dxy: `https://api.stlouisfed.org/fred/series/observations?series_id=DTWEXBGS&api_key=${FRED_API_KEY}&file_type=json&limit=1&sort_order=desc`,
+const fredUrl = (seriesId) =>
+  `https://api.stlouisfed.org/fred/series/observations?series_id=${seriesId}&api_key=${FRED_API_KEY}&file_type=json&limit=1&sort_order=desc`;
+
+const FRED_SERIES = FRED_API_KEY ? {
+  vix: fredUrl('VIXCLS'),
+  dxy: fredUrl('DTWEXBGS'),
+  sp500: fredUrl('SP500'),
+  treasury10y: fredUrl('DGS10'),
+  gold: fredUrl('GOLDAMGBD228NLBM'),
 } : null;
 
 async function fetchWithRetry(url, retries = 2) {
@@ -87,35 +93,80 @@ async function fetchGlobalCrypto() {
   };
 }
 
-async function fetchFredIndicator(type) {
-  if (!FRED_APIS) return { value: null, source: 'API_KEY_REQUIRED' };
+async function fetchFredValue(key) {
+  if (!FRED_SERIES?.[key]) return null;
 
-  const url = type === 'vix' ? FRED_APIS.vix : FRED_APIS.dxy;
-  const data = await fetchWithRetry(url);
+  const data = await fetchWithRetry(FRED_SERIES[key]);
   if (!data?.observations?.[0]) return null;
 
-  const value = parseFloat(data.observations[0].value);
+  const raw = data.observations[0].value;
+  if (raw === '.') return null; // FRED uses '.' for missing data
 
-  if (type === 'vix') {
-    return {
-      value,
-      zone: value < 15 ? 'LOW' : value < 20 ? 'NORMAL' : value < 30 ? 'ELEVATED' : 'EXTREME',
-      signal: value > 30 ? 'PANIC' : value > 25 ? 'FEAR' : value < 15 ? 'COMPLACENCY' : 'NEUTRAL',
-      source: 'FRED'
-    };
-  } else {
-    return {
-      value,
-      zone: value > 105 ? 'STRONG' : value > 100 ? 'NEUTRAL' : 'WEAK',
-      impact: value > 105 ? 'Pressures BTC and gold' : value < 100 ? 'Favors BTC and gold' : 'Neutral',
-      source: 'FRED'
-    };
-  }
+  return parseFloat(raw);
+}
+
+async function fetchVix() {
+  const value = await fetchFredValue('vix');
+  if (value === null) return FRED_API_KEY ? null : { value: null, source: 'API_KEY_REQUIRED' };
+
+  return {
+    value,
+    zone: value < 15 ? 'LOW' : value < 20 ? 'NORMAL' : value < 30 ? 'ELEVATED' : 'EXTREME',
+    signal: value > 30 ? 'PANIC' : value > 25 ? 'FEAR' : value < 15 ? 'COMPLACENCY' : 'NEUTRAL',
+    source: 'FRED'
+  };
+}
+
+async function fetchDxy() {
+  const value = await fetchFredValue('dxy');
+  if (value === null) return FRED_API_KEY ? null : { value: null, source: 'API_KEY_REQUIRED' };
+
+  return {
+    value,
+    zone: value > 105 ? 'STRONG' : value > 100 ? 'NEUTRAL' : 'WEAK',
+    impact: value > 105 ? 'Pressures BTC and gold' : value < 100 ? 'Favors BTC and gold' : 'Neutral',
+    source: 'FRED'
+  };
+}
+
+async function fetchSP500() {
+  const value = await fetchFredValue('sp500');
+  if (value === null) return null;
+
+  return {
+    value,
+    valueFormatted: `$${value.toLocaleString('en-US', {maximumFractionDigits: 0})}`,
+    source: 'FRED'
+  };
+}
+
+async function fetchTreasury10y() {
+  const value = await fetchFredValue('treasury10y');
+  if (value === null) return null;
+
+  return {
+    value,
+    valueFormatted: `${value.toFixed(2)}%`,
+    zone: value > 5 ? 'HIGH' : value > 4 ? 'ELEVATED' : value > 3 ? 'NORMAL' : 'LOW',
+    source: 'FRED'
+  };
+}
+
+async function fetchGold() {
+  const value = await fetchFredValue('gold');
+  if (value === null) return null;
+
+  return {
+    value,
+    valueFormatted: `$${value.toLocaleString('en-US', {maximumFractionDigits: 2})}`,
+    source: 'FRED'
+  };
 }
 
 function generateAlerts(data) {
   const alerts = [];
 
+  // Fear & Greed extremes
   if (data.fearGreed?.value <= 20) {
     alerts.push({
       level: 'critical',
@@ -132,6 +183,7 @@ function generateAlerts(data) {
     });
   }
 
+  // VIX panic
   if (data.vix?.value > 30) {
     alerts.push({
       level: 'critical',
@@ -141,12 +193,23 @@ function generateAlerts(data) {
     });
   }
 
+  // BTC high volatility
   if (data.crypto?.BTC && Math.abs(data.crypto.BTC.change24h) > 8) {
     alerts.push({
       level: 'warning',
       type: 'btc_volatility',
       title: 'High BTC Volatility',
       message: `Bitcoin ${data.crypto.BTC.change24h > 0 ? 'up' : 'down'} ${Math.abs(data.crypto.BTC.change24h).toFixed(1)}% in 24h.`
+    });
+  }
+
+  // Treasury 10Y yield spike
+  if (data.treasury10y?.value > 5) {
+    alerts.push({
+      level: 'warning',
+      type: 'treasury_10y',
+      title: 'High Treasury Yield',
+      message: `10Y Treasury at ${data.treasury10y.value.toFixed(2)}%. Risk-off pressure on equities and crypto.`
     });
   }
 
@@ -159,12 +222,15 @@ function generateAlerts(data) {
 async function main() {
   console.log('Fetching market data...\n');
 
-  const [fearGreed, crypto, globalCrypto, vix, dxy] = await Promise.all([
+  const [fearGreed, crypto, globalCrypto, vix, dxy, sp500, treasury10y, gold] = await Promise.all([
     fetchFearGreed(),
     fetchCryptoPrices(),
     fetchGlobalCrypto(),
-    fetchFredIndicator('vix'),
-    fetchFredIndicator('dxy')
+    fetchVix(),
+    fetchDxy(),
+    fetchSP500(),
+    fetchTreasury10y(),
+    fetchGold()
   ]);
 
   const thermometer = {
@@ -172,22 +238,25 @@ async function main() {
       fearGreed,
       vix,
       dxy,
+      sp500,
+      treasury10y,
+      gold,
       bitcoin: crypto?.BTC
     },
     crypto: {
       ...crypto,
       global: globalCrypto
     },
-    alerts: generateAlerts({ fearGreed, vix, crypto }),
+    alerts: generateAlerts({ fearGreed, vix, crypto, treasury10y }),
     meta: {
       timestamp: new Date().toISOString(),
-      updatedAt: new Date().toLocaleString('en-US', { timeZone: 'Europe/Lisbon' }),
+      updatedAt: new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' }),
       source: 'GitHub Actions Cron',
       nextUpdate: 'Every hour',
       apis: {
         fearGreed: fearGreed ? 'OK' : 'ERROR',
         coingecko: crypto ? 'OK' : 'ERROR',
-        fred: vix?.value ? 'OK' : (vix?.source || 'ERROR')
+        fred: vix?.value != null ? 'OK' : (vix?.source || 'ERROR')
       }
     }
   };
@@ -196,10 +265,13 @@ async function main() {
   fs.writeFileSync(outputPath, JSON.stringify(thermometer, null, 2));
 
   console.log('Dashboard:');
-  console.log(`  Fear & Greed: ${fearGreed?.value || 'N/A'} (${fearGreed?.classification || 'N/A'})`);
-  console.log(`  BTC: ${crypto?.BTC?.priceFormatted || 'N/A'} (${crypto?.BTC?.changeFormatted || 'N/A'})`);
-  console.log(`  VIX: ${vix?.value?.toFixed(1) || 'N/A'} (${vix?.zone || 'N/A'})`);
-  console.log(`  DXY: ${dxy?.value?.toFixed(2) || 'N/A'} (${dxy?.zone || 'N/A'})`);
+  console.log(`  Fear & Greed: ${fearGreed?.value ?? 'N/A'} (${fearGreed?.classification ?? 'N/A'})`);
+  console.log(`  BTC: ${crypto?.BTC?.priceFormatted ?? 'N/A'} (${crypto?.BTC?.changeFormatted ?? 'N/A'})`);
+  console.log(`  VIX: ${vix?.value?.toFixed(1) ?? 'N/A'} (${vix?.zone ?? 'N/A'})`);
+  console.log(`  DXY: ${dxy?.value?.toFixed(2) ?? 'N/A'} (${dxy?.zone ?? 'N/A'})`);
+  console.log(`  S&P 500: ${sp500?.valueFormatted ?? 'N/A'}`);
+  console.log(`  10Y Treasury: ${treasury10y?.valueFormatted ?? 'N/A'} (${treasury10y?.zone ?? 'N/A'})`);
+  console.log(`  Gold: ${gold?.valueFormatted ?? 'N/A'}`);
   console.log(`\nAlerts: ${thermometer.alerts.length}`);
   thermometer.alerts.forEach(a => console.log(`  [${a.level.toUpperCase()}] ${a.title}`));
   console.log(`\nSaved to: ${outputPath}`);
