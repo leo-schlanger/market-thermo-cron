@@ -31,48 +31,48 @@
     "gold": null,
     "bitcoin": {
       "symbol": "BTC",
-      "price": 68407,
-      "priceFormatted": "$68,407",
-      "change24h": -1.78,
-      "changeFormatted": "-1.78%",
-      "marketCap": 1369166165057.807,
+      "price": 68300,
+      "priceFormatted": "$68,300",
+      "change24h": -1.73,
+      "changeFormatted": "-1.73%",
+      "marketCap": 1367159568571.8892,
       "sentiment": "NEUTRAL"
     }
   },
   "crypto": {
     "BTC": {
       "symbol": "BTC",
-      "price": 68407,
-      "priceFormatted": "$68,407",
-      "change24h": -1.78,
-      "changeFormatted": "-1.78%",
-      "marketCap": 1369166165057.807,
+      "price": 68300,
+      "priceFormatted": "$68,300",
+      "change24h": -1.73,
+      "changeFormatted": "-1.73%",
+      "marketCap": 1367159568571.8892,
       "sentiment": "NEUTRAL"
     },
     "ETH": {
       "symbol": "ETH",
-      "price": 2089.81,
-      "priceFormatted": "$2,090",
-      "change24h": -2.85,
-      "changeFormatted": "-2.85%",
-      "marketCap": 252371198376.95026,
-      "sentiment": "NEUTRAL"
+      "price": 2078.69,
+      "priceFormatted": "$2,079",
+      "change24h": -3.44,
+      "changeFormatted": "-3.44%",
+      "marketCap": 250897479689.57425,
+      "sentiment": "BEARISH"
     },
     "SOL": {
       "symbol": "SOL",
-      "price": 79.28,
-      "priceFormatted": "$79.28",
-      "change24h": -3.88,
-      "changeFormatted": "-3.88%",
-      "marketCap": 45473742618.58804,
+      "price": 78.93,
+      "priceFormatted": "$78.93",
+      "change24h": -4.26,
+      "changeFormatted": "-4.26%",
+      "marketCap": 45294887438.3696,
       "sentiment": "BEARISH"
     },
     "global": {
-      "totalMarketCap": 2415953230091.294,
-      "totalMarketCapFormatted": "$2.42T",
+      "totalMarketCap": 2413984751850.9355,
+      "totalMarketCapFormatted": "$2.41T",
       "btcDominance": "56.6",
       "ethDominance": "10.4",
-      "marketCapChange24h": "-1.89"
+      "marketCapChange24h": "-1.70"
     }
   },
   "alerts": [
@@ -84,8 +84,8 @@
     }
   ],
   "meta": {
-    "timestamp": "2026-04-07T11:42:09.016Z",
-    "updatedAt": "07/04/2026, 08:42:09",
+    "timestamp": "2026-04-07T12:47:58.391Z",
+    "updatedAt": "07/04/2026, 09:47:58",
     "source": "GitHub Actions Cron",
     "nextUpdate": "Every hour",
     "apis": {
