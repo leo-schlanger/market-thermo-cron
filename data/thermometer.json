@@ -6,9 +6,9 @@
       "signal": "BUY"
     },
     "vix": {
-      "value": 24.17,
+      "value": 25.78,
       "zone": "ELEVATED",
-      "signal": "NEUTRAL",
+      "signal": "FEAR",
       "source": "FRED"
     },
     "dxy": {
@@ -31,48 +31,48 @@
     "gold": null,
     "bitcoin": {
       "symbol": "BTC",
-      "price": 71916,
-      "priceFormatted": "$71,916",
-      "change24h": 5.34,
-      "changeFormatted": "+5.34%",
-      "marketCap": 1437928292551.4133,
+      "price": 71408,
+      "priceFormatted": "$71,408",
+      "change24h": 4.83,
+      "changeFormatted": "+4.83%",
+      "marketCap": 1431165741863.596,
       "sentiment": "BULLISH"
     }
   },
   "crypto": {
     "BTC": {
       "symbol": "BTC",
-      "price": 71916,
-      "priceFormatted": "$71,916",
-      "change24h": 5.34,
-      "changeFormatted": "+5.34%",
-      "marketCap": 1437928292551.4133,
+      "price": 71408,
+      "priceFormatted": "$71,408",
+      "change24h": 4.83,
+      "changeFormatted": "+4.83%",
+      "marketCap": 1431165741863.596,
       "sentiment": "BULLISH"
     },
     "ETH": {
       "symbol": "ETH",
-      "price": 2254.33,
-      "priceFormatted": "$2,254",
-      "change24h": 8.46,
-      "changeFormatted": "+8.46%",
-      "marketCap": 271917389215.23853,
+      "price": 2226.8,
+      "priceFormatted": "$2,227",
+      "change24h": 7.4,
+      "changeFormatted": "+7.40%",
+      "marketCap": 269034770431.05145,
       "sentiment": "BULLISH"
     },
     "SOL": {
       "symbol": "SOL",
-      "price": 84.59,
-      "priceFormatted": "$84.59",
-      "change24h": 7.18,
-      "changeFormatted": "+7.18%",
-      "marketCap": 48515266274.41793,
+      "price": 83.51,
+      "priceFormatted": "$83.51",
+      "change24h": 5.74,
+      "changeFormatted": "+5.74%",
+      "marketCap": 47972094028.61167,
       "sentiment": "BULLISH"
     },
     "global": {
-      "totalMarketCap": 2532727953847.686,
-      "totalMarketCapFormatted": "$2.53T",
+      "totalMarketCap": 2521707746884.7764,
+      "totalMarketCapFormatted": "$2.52T",
       "btcDominance": "56.8",
       "ethDominance": "10.7",
-      "marketCapChange24h": "4.72"
+      "marketCapChange24h": "4.81"
     }
   },
   "alerts": [
@@ -84,8 +84,8 @@
     }
   ],
   "meta": {
-    "timestamp": "2026-04-08T12:46:46.604Z",
-    "updatedAt": "08/04/2026, 09:46:46",
+    "timestamp": "2026-04-08T14:25:15.286Z",
+    "updatedAt": "08/04/2026, 11:25:15",
     "source": "GitHub Actions Cron",
     "nextUpdate": "Every hour",
     "apis": {
