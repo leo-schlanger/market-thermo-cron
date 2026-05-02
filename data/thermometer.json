@@ -31,54 +31,54 @@
     "gold": null,
     "bitcoin": {
       "symbol": "BTC",
-      "price": 78477,
-      "priceFormatted": "$78,477",
-      "change24h": 0.36,
-      "changeFormatted": "+0.36%",
-      "marketCap": 1571874851660.5,
+      "price": 78443,
+      "priceFormatted": "$78,443",
+      "change24h": 0.31,
+      "changeFormatted": "+0.31%",
+      "marketCap": 1570549510978.526,
       "sentiment": "NEUTRAL"
     }
   },
   "crypto": {
     "BTC": {
       "symbol": "BTC",
-      "price": 78477,
-      "priceFormatted": "$78,477",
-      "change24h": 0.36,
-      "changeFormatted": "+0.36%",
-      "marketCap": 1571874851660.5,
+      "price": 78443,
+      "priceFormatted": "$78,443",
+      "change24h": 0.31,
+      "changeFormatted": "+0.31%",
+      "marketCap": 1570549510978.526,
       "sentiment": "NEUTRAL"
     },
     "ETH": {
       "symbol": "ETH",
-      "price": 2307.93,
+      "price": 2307.6,
       "priceFormatted": "$2,308",
-      "change24h": 0.32,
-      "changeFormatted": "+0.32%",
-      "marketCap": 278620683795.9624,
+      "change24h": 0.21,
+      "changeFormatted": "+0.21%",
+      "marketCap": 278491234569.0905,
       "sentiment": "NEUTRAL"
     },
     "SOL": {
       "symbol": "SOL",
-      "price": 84.08,
-      "priceFormatted": "$84.08",
-      "change24h": -0.26,
-      "changeFormatted": "-0.26%",
-      "marketCap": 48455035801.266464,
+      "price": 84.07,
+      "priceFormatted": "$84.07",
+      "change24h": 0.14,
+      "changeFormatted": "+0.14%",
+      "marketCap": 48437919704.36978,
       "sentiment": "NEUTRAL"
     },
     "global": {
-      "totalMarketCap": 2689077803751.118,
+      "totalMarketCap": 2686047631242.923,
       "totalMarketCapFormatted": "$2.69T",
       "btcDominance": "58.5",
       "ethDominance": "10.4",
-      "marketCapChange24h": "0.33"
+      "marketCapChange24h": "-0.08"
     }
   },
   "alerts": [],
   "meta": {
-    "timestamp": "2026-05-02T16:32:51.054Z",
-    "updatedAt": "02/05/2026, 13:32:51",
+    "timestamp": "2026-05-02T17:34:12.477Z",
+    "updatedAt": "02/05/2026, 14:34:12",
     "source": "GitHub Actions Cron",
     "nextUpdate": "Every hour",
     "apis": {
