@@ -31,54 +31,54 @@
     "gold": null,
     "bitcoin": {
       "symbol": "BTC",
-      "price": 80581,
-      "priceFormatted": "$80,581",
-      "change24h": -0.49,
-      "changeFormatted": "-0.49%",
-      "marketCap": 1614897505983.895,
+      "price": 80629,
+      "priceFormatted": "$80,629",
+      "change24h": -0.63,
+      "changeFormatted": "-0.63%",
+      "marketCap": 1615228039331.8118,
       "sentiment": "NEUTRAL"
     }
   },
   "crypto": {
     "BTC": {
       "symbol": "BTC",
-      "price": 80581,
-      "priceFormatted": "$80,581",
-      "change24h": -0.49,
-      "changeFormatted": "-0.49%",
-      "marketCap": 1614897505983.895,
+      "price": 80629,
+      "priceFormatted": "$80,629",
+      "change24h": -0.63,
+      "changeFormatted": "-0.63%",
+      "marketCap": 1615228039331.8118,
       "sentiment": "NEUTRAL"
     },
     "ETH": {
       "symbol": "ETH",
-      "price": 2284.06,
+      "price": 2284.03,
       "priceFormatted": "$2,284",
-      "change24h": -2.01,
-      "changeFormatted": "-2.01%",
-      "marketCap": 275831637107.7996,
+      "change24h": -1.84,
+      "changeFormatted": "-1.84%",
+      "marketCap": 275684956262.18616,
       "sentiment": "NEUTRAL"
     },
     "SOL": {
       "symbol": "SOL",
-      "price": 94.91,
-      "priceFormatted": "$94.91",
-      "change24h": -0.15,
-      "changeFormatted": "-0.15%",
-      "marketCap": 54868845287.90612,
+      "price": 95,
+      "priceFormatted": "$95.00",
+      "change24h": -0.09,
+      "changeFormatted": "-0.09%",
+      "marketCap": 54904572209.717094,
       "sentiment": "NEUTRAL"
     },
     "global": {
-      "totalMarketCap": 2771937111920.1455,
+      "totalMarketCap": 2771811459646.343,
       "totalMarketCapFormatted": "$2.77T",
       "btcDominance": "58.3",
       "ethDominance": "9.9",
-      "marketCapChange24h": "-0.62"
+      "marketCapChange24h": "-0.44"
     }
   },
   "alerts": [],
   "meta": {
-    "timestamp": "2026-05-12T11:07:19.124Z",
-    "updatedAt": "12/05/2026, 08:07:19",
+    "timestamp": "2026-05-12T13:28:27.937Z",
+    "updatedAt": "12/05/2026, 10:28:27",
     "source": "GitHub Actions Cron",
     "nextUpdate": "Every hour",
     "apis": {
