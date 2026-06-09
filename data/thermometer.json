@@ -31,41 +31,41 @@
     "gold": null,
     "bitcoin": {
       "symbol": "BTC",
-      "price": 62120,
-      "priceFormatted": "$62,120",
-      "change24h": -2.65,
-      "changeFormatted": "-2.65%",
-      "marketCap": 1245487746322.885,
+      "price": 61481,
+      "priceFormatted": "$61,481",
+      "change24h": -2.96,
+      "changeFormatted": "-2.96%",
+      "marketCap": 1233913777622.7148,
       "sentiment": "NEUTRAL"
     }
   },
   "crypto": {
     "BTC": {
       "symbol": "BTC",
-      "price": 62120,
-      "priceFormatted": "$62,120",
-      "change24h": -2.65,
-      "changeFormatted": "-2.65%",
-      "marketCap": 1245487746322.885,
+      "price": 61481,
+      "priceFormatted": "$61,481",
+      "change24h": -2.96,
+      "changeFormatted": "-2.96%",
+      "marketCap": 1233913777622.7148,
       "sentiment": "NEUTRAL"
     },
     "ETH": {
       "symbol": "ETH",
-      "price": 1662.44,
-      "priceFormatted": "$1,662",
-      "change24h": -1.41,
-      "changeFormatted": "-1.41%",
-      "marketCap": 200733217664.21313,
+      "price": 1638.28,
+      "priceFormatted": "$1,638",
+      "change24h": -2.36,
+      "changeFormatted": "-2.36%",
+      "marketCap": 197752969809.90778,
       "sentiment": "NEUTRAL"
     },
     "SOL": {
       "symbol": "SOL",
-      "price": 65.66,
-      "priceFormatted": "$65.66",
-      "change24h": -1.6,
-      "changeFormatted": "-1.60%",
-      "marketCap": 38048157417.6572,
-      "sentiment": "NEUTRAL"
+      "price": 64.33,
+      "priceFormatted": "$64.33",
+      "change24h": -3.47,
+      "changeFormatted": "-3.47%",
+      "marketCap": 37274738398.27992,
+      "sentiment": "BEARISH"
     },
     "global": {
       "totalMarketCap": 2231369430336.6367,
@@ -84,8 +84,8 @@
     }
   ],
   "meta": {
-    "timestamp": "2026-06-09T14:11:17.201Z",
-    "updatedAt": "09/06/2026, 11:11:17",
+    "timestamp": "2026-06-09T17:14:36.561Z",
+    "updatedAt": "09/06/2026, 14:14:36",
     "source": "GitHub Actions Cron",
     "nextUpdate": "Every hour",
     "apis": {
