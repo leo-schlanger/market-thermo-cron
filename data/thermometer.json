@@ -1,7 +1,7 @@
 {
   "dashboard": {
     "fearGreed": {
-      "value": 13,
+      "value": 18,
       "classification": "Extreme Fear",
       "signal": "BUY"
     },
@@ -31,48 +31,48 @@
     "gold": null,
     "bitcoin": {
       "symbol": "BTC",
-      "price": 64442,
-      "priceFormatted": "$64,442",
-      "change24h": 1.52,
-      "changeFormatted": "+1.52%",
-      "marketCap": 1291546194319.9507,
+      "price": 64418,
+      "priceFormatted": "$64,418",
+      "change24h": 1.39,
+      "changeFormatted": "+1.39%",
+      "marketCap": 1290893015744.259,
       "sentiment": "NEUTRAL"
     }
   },
   "crypto": {
     "BTC": {
       "symbol": "BTC",
-      "price": 64442,
-      "priceFormatted": "$64,442",
-      "change24h": 1.52,
-      "changeFormatted": "+1.52%",
-      "marketCap": 1291546194319.9507,
+      "price": 64418,
+      "priceFormatted": "$64,418",
+      "change24h": 1.39,
+      "changeFormatted": "+1.39%",
+      "marketCap": 1290893015744.259,
       "sentiment": "NEUTRAL"
     },
     "ETH": {
       "symbol": "ETH",
-      "price": 1681.27,
-      "priceFormatted": "$1,681",
-      "change24h": 1.18,
-      "changeFormatted": "+1.18%",
-      "marketCap": 202902885375.39084,
+      "price": 1680.07,
+      "priceFormatted": "$1,680",
+      "change24h": 0.9,
+      "changeFormatted": "+0.90%",
+      "marketCap": 202710128135.9708,
       "sentiment": "NEUTRAL"
     },
     "SOL": {
       "symbol": "SOL",
-      "price": 68.93,
-      "priceFormatted": "$68.93",
-      "change24h": 3.63,
-      "changeFormatted": "+3.63%",
-      "marketCap": 39977141219.82908,
+      "price": 68.85,
+      "priceFormatted": "$68.85",
+      "change24h": 3.15,
+      "changeFormatted": "+3.15%",
+      "marketCap": 39904208695.505394,
       "sentiment": "BULLISH"
     },
     "global": {
-      "totalMarketCap": 2283461735395.485,
+      "totalMarketCap": 2282448250760.783,
       "totalMarketCapFormatted": "$2.28T",
-      "btcDominance": "56.6",
+      "btcDominance": "56.5",
       "ethDominance": "8.9",
-      "marketCapChange24h": "1.33"
+      "marketCapChange24h": "1.13"
     }
   },
   "alerts": [
@@ -80,12 +80,12 @@
       "level": "critical",
       "type": "fear_greed",
       "title": "Extreme Fear",
-      "message": "Fear & Greed at 13. Historically precedes reversals."
+      "message": "Fear & Greed at 18. Historically precedes reversals."
     }
   ],
   "meta": {
-    "timestamp": "2026-06-13T22:57:34.308Z",
-    "updatedAt": "13/06/2026, 19:57:34",
+    "timestamp": "2026-06-14T00:00:29.611Z",
+    "updatedAt": "13/06/2026, 21:00:29",
     "source": "GitHub Actions Cron",
     "nextUpdate": "Every hour",
     "apis": {
