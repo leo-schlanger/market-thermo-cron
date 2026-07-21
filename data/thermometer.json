@@ -31,54 +31,54 @@
     "gold": null,
     "bitcoin": {
       "symbol": "BTC",
-      "price": 66286,
-      "priceFormatted": "$66,286",
+      "price": 66378,
+      "priceFormatted": "$66,378",
       "change24h": 1.86,
       "changeFormatted": "+1.86%",
-      "marketCap": 1329666814210.8147,
+      "marketCap": 1331647504182.8787,
       "sentiment": "NEUTRAL"
     }
   },
   "crypto": {
     "BTC": {
       "symbol": "BTC",
-      "price": 66286,
-      "priceFormatted": "$66,286",
+      "price": 66378,
+      "priceFormatted": "$66,378",
       "change24h": 1.86,
       "changeFormatted": "+1.86%",
-      "marketCap": 1329666814210.8147,
+      "marketCap": 1331647504182.8787,
       "sentiment": "NEUTRAL"
     },
     "ETH": {
       "symbol": "ETH",
-      "price": 1921.25,
-      "priceFormatted": "$1,921",
-      "change24h": 1.45,
-      "changeFormatted": "+1.45%",
-      "marketCap": 231863564602.4331,
+      "price": 1922.18,
+      "priceFormatted": "$1,922",
+      "change24h": 1.16,
+      "changeFormatted": "+1.16%",
+      "marketCap": 232015651095.4449,
       "sentiment": "NEUTRAL"
     },
     "SOL": {
       "symbol": "SOL",
-      "price": 77.95,
-      "priceFormatted": "$77.95",
-      "change24h": 0.56,
-      "changeFormatted": "+0.56%",
-      "marketCap": 45425904304.81497,
+      "price": 77.99,
+      "priceFormatted": "$77.99",
+      "change24h": 0.41,
+      "changeFormatted": "+0.41%",
+      "marketCap": 45449460619.90915,
       "sentiment": "NEUTRAL"
     },
     "global": {
-      "totalMarketCap": 2340309830419.4336,
+      "totalMarketCap": 2342302664944.6934,
       "totalMarketCapFormatted": "$2.34T",
       "btcDominance": "56.8",
       "ethDominance": "9.9",
-      "marketCapChange24h": "1.35"
+      "marketCapChange24h": "1.25"
     }
   },
   "alerts": [],
   "meta": {
-    "timestamp": "2026-07-21T22:41:04.085Z",
-    "updatedAt": "21/07/2026, 19:41:04",
+    "timestamp": "2026-07-21T23:43:57.908Z",
+    "updatedAt": "21/07/2026, 20:43:57",
     "source": "GitHub Actions Cron",
     "nextUpdate": "Every hour",
     "apis": {
