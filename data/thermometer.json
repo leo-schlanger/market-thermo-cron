@@ -31,54 +31,54 @@
     "gold": null,
     "bitcoin": {
       "symbol": "BTC",
-      "price": 64798,
-      "priceFormatted": "$64,798",
+      "price": 64791,
+      "priceFormatted": "$64,791",
       "change24h": -0.21,
       "changeFormatted": "-0.21%",
-      "marketCap": 1300357063776.2205,
+      "marketCap": 1300212975823.1526,
       "sentiment": "NEUTRAL"
     }
   },
   "crypto": {
     "BTC": {
       "symbol": "BTC",
-      "price": 64798,
-      "priceFormatted": "$64,798",
+      "price": 64791,
+      "priceFormatted": "$64,791",
       "change24h": -0.21,
       "changeFormatted": "-0.21%",
-      "marketCap": 1300357063776.2205,
+      "marketCap": 1300212975823.1526,
       "sentiment": "NEUTRAL"
     },
     "ETH": {
       "symbol": "ETH",
-      "price": 1915.5,
+      "price": 1916.18,
       "priceFormatted": "$1,916",
-      "change24h": 0.01,
-      "changeFormatted": "+0.01%",
-      "marketCap": 231166396697.98386,
+      "change24h": 0.16,
+      "changeFormatted": "+0.16%",
+      "marketCap": 231243512793.74475,
       "sentiment": "NEUTRAL"
     },
     "SOL": {
       "symbol": "SOL",
-      "price": 76.18,
-      "priceFormatted": "$76.18",
-      "change24h": 2.01,
-      "changeFormatted": "+2.01%",
-      "marketCap": 44347476723.83658,
+      "price": 76.22,
+      "priceFormatted": "$76.22",
+      "change24h": 2.11,
+      "changeFormatted": "+2.11%",
+      "marketCap": 44382258456.30712,
       "sentiment": "NEUTRAL"
     },
     "global": {
-      "totalMarketCap": 2296723057130.0283,
+      "totalMarketCap": 2296774897478.401,
       "totalMarketCapFormatted": "$2.30T",
       "btcDominance": "56.6",
       "ethDominance": "10.1",
-      "marketCapChange24h": "0.01"
+      "marketCapChange24h": "0.06"
     }
   },
   "alerts": [],
   "meta": {
-    "timestamp": "2026-08-09T06:32:37.408Z",
-    "updatedAt": "09/08/2026, 03:32:37",
+    "timestamp": "2026-08-09T07:41:44.264Z",
+    "updatedAt": "09/08/2026, 04:41:44",
     "source": "GitHub Actions Cron",
     "nextUpdate": "Every hour",
     "apis": {
