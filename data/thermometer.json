@@ -1,7 +1,7 @@
 {
   "dashboard": {
     "fearGreed": {
-      "value": 31,
+      "value": 30,
       "classification": "Fear",
       "signal": "NEUTRAL"
     },
@@ -31,54 +31,54 @@
     "gold": null,
     "bitcoin": {
       "symbol": "BTC",
-      "price": 65004,
-      "priceFormatted": "$65,004",
-      "change24h": 0.17,
-      "changeFormatted": "+0.17%",
-      "marketCap": 1304156037152.0698,
+      "price": 64911,
+      "priceFormatted": "$64,911",
+      "change24h": -0.05,
+      "changeFormatted": "-0.05%",
+      "marketCap": 1302839804783.8525,
       "sentiment": "NEUTRAL"
     }
   },
   "crypto": {
     "BTC": {
       "symbol": "BTC",
-      "price": 65004,
-      "priceFormatted": "$65,004",
-      "change24h": 0.17,
-      "changeFormatted": "+0.17%",
-      "marketCap": 1304156037152.0698,
+      "price": 64911,
+      "priceFormatted": "$64,911",
+      "change24h": -0.05,
+      "changeFormatted": "-0.05%",
+      "marketCap": 1302839804783.8525,
       "sentiment": "NEUTRAL"
     },
     "ETH": {
       "symbol": "ETH",
-      "price": 1917.28,
-      "priceFormatted": "$1,917",
-      "change24h": 0.18,
-      "changeFormatted": "+0.18%",
-      "marketCap": 231381405193.2941,
+      "price": 1911.53,
+      "priceFormatted": "$1,912",
+      "change24h": -0.28,
+      "changeFormatted": "-0.28%",
+      "marketCap": 230724536760.9659,
       "sentiment": "NEUTRAL"
     },
     "SOL": {
       "symbol": "SOL",
-      "price": 76.7,
-      "priceFormatted": "$76.70",
-      "change24h": 1.25,
-      "changeFormatted": "+1.25%",
-      "marketCap": 44671591577.26728,
+      "price": 76.44,
+      "priceFormatted": "$76.44",
+      "change24h": 0.66,
+      "changeFormatted": "+0.66%",
+      "marketCap": 44508820338.49602,
       "sentiment": "NEUTRAL"
     },
     "global": {
-      "totalMarketCap": 2301723603022.5693,
+      "totalMarketCap": 2299780433519.593,
       "totalMarketCapFormatted": "$2.30T",
       "btcDominance": "56.7",
       "ethDominance": "10.0",
-      "marketCapChange24h": "0.14"
+      "marketCapChange24h": "0.02"
     }
   },
   "alerts": [],
   "meta": {
-    "timestamp": "2026-08-09T23:16:30.976Z",
-    "updatedAt": "09/08/2026, 20:16:30",
+    "timestamp": "2026-08-10T00:40:11.845Z",
+    "updatedAt": "09/08/2026, 21:40:11",
     "source": "GitHub Actions Cron",
     "nextUpdate": "Every hour",
     "apis": {
