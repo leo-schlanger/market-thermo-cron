@@ -33,9 +33,9 @@
       "symbol": "BTC",
       "price": 63429,
       "priceFormatted": "$63,429",
-      "change24h": -0.3,
-      "changeFormatted": "-0.30%",
-      "marketCap": 1272846727377.631,
+      "change24h": -0.37,
+      "changeFormatted": "-0.37%",
+      "marketCap": 1273038830384.2112,
       "sentiment": "NEUTRAL"
     }
   },
@@ -44,41 +44,41 @@
       "symbol": "BTC",
       "price": 63429,
       "priceFormatted": "$63,429",
-      "change24h": -0.3,
-      "changeFormatted": "-0.30%",
-      "marketCap": 1272846727377.631,
+      "change24h": -0.37,
+      "changeFormatted": "-0.37%",
+      "marketCap": 1273038830384.2112,
       "sentiment": "NEUTRAL"
     },
     "ETH": {
       "symbol": "ETH",
-      "price": 1877.04,
-      "priceFormatted": "$1,877",
-      "change24h": -0.14,
-      "changeFormatted": "-0.14%",
-      "marketCap": 226437348325.23303,
+      "price": 1877.75,
+      "priceFormatted": "$1,878",
+      "change24h": -0.22,
+      "changeFormatted": "-0.22%",
+      "marketCap": 226588703547.51404,
       "sentiment": "NEUTRAL"
     },
     "SOL": {
       "symbol": "SOL",
-      "price": 75.49,
-      "priceFormatted": "$75.49",
-      "change24h": -0.68,
-      "changeFormatted": "-0.68%",
-      "marketCap": 43967062539.83788,
+      "price": 75.51,
+      "priceFormatted": "$75.51",
+      "change24h": -1.1,
+      "changeFormatted": "-1.10%",
+      "marketCap": 43995027143.235565,
       "sentiment": "NEUTRAL"
     },
     "global": {
-      "totalMarketCap": 2263464565193.103,
+      "totalMarketCap": 2261868404392.0947,
       "totalMarketCapFormatted": "$2.26T",
       "btcDominance": "56.3",
       "ethDominance": "10.0",
-      "marketCapChange24h": "-0.25"
+      "marketCapChange24h": "-0.31"
     }
   },
   "alerts": [],
   "meta": {
-    "timestamp": "2026-08-12T21:31:21.262Z",
-    "updatedAt": "12/08/2026, 18:31:21",
+    "timestamp": "2026-08-12T22:26:08.230Z",
+    "updatedAt": "12/08/2026, 19:26:08",
     "source": "GitHub Actions Cron",
     "nextUpdate": "Every hour",
     "apis": {
