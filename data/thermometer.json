@@ -31,54 +31,54 @@
     "gold": null,
     "bitcoin": {
       "symbol": "BTC",
-      "price": 63068,
-      "priceFormatted": "$63,068",
+      "price": 63103,
+      "priceFormatted": "$63,103",
       "change24h": 0.06,
       "changeFormatted": "+0.06%",
-      "marketCap": 1265833340761.7512,
+      "marketCap": 1266521367943.2795,
       "sentiment": "NEUTRAL"
     }
   },
   "crypto": {
     "BTC": {
       "symbol": "BTC",
-      "price": 63068,
-      "priceFormatted": "$63,068",
+      "price": 63103,
+      "priceFormatted": "$63,103",
       "change24h": 0.06,
       "changeFormatted": "+0.06%",
-      "marketCap": 1265833340761.7512,
+      "marketCap": 1266521367943.2795,
       "sentiment": "NEUTRAL"
     },
     "ETH": {
       "symbol": "ETH",
-      "price": 1882.01,
+      "price": 1881.99,
       "priceFormatted": "$1,882",
-      "change24h": -0.02,
-      "changeFormatted": "-0.02%",
-      "marketCap": 227124798909.30835,
+      "change24h": -0.01,
+      "changeFormatted": "-0.01%",
+      "marketCap": 227122137942.90427,
       "sentiment": "NEUTRAL"
     },
     "SOL": {
       "symbol": "SOL",
-      "price": 75.56,
-      "priceFormatted": "$75.56",
-      "change24h": 0.03,
-      "changeFormatted": "+0.03%",
-      "marketCap": 44032670325.63387,
+      "price": 75.52,
+      "priceFormatted": "$75.52",
+      "change24h": 0.08,
+      "changeFormatted": "+0.08%",
+      "marketCap": 44010640674.22208,
       "sentiment": "NEUTRAL"
     },
     "global": {
-      "totalMarketCap": 2253037852095.6025,
+      "totalMarketCap": 2253000579575.188,
       "totalMarketCapFormatted": "$2.25T",
       "btcDominance": "56.2",
       "ethDominance": "10.1",
-      "marketCapChange24h": "-0.05"
+      "marketCapChange24h": "-0.11"
     }
   },
   "alerts": [],
   "meta": {
-    "timestamp": "2026-08-16T03:35:50.455Z",
-    "updatedAt": "16/08/2026, 00:35:50",
+    "timestamp": "2026-08-16T04:22:12.306Z",
+    "updatedAt": "16/08/2026, 01:22:12",
     "source": "GitHub Actions Cron",
     "nextUpdate": "Every hour",
     "apis": {
