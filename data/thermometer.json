@@ -31,48 +31,48 @@
     "gold": null,
     "bitcoin": {
       "symbol": "BTC",
-      "price": 71852,
-      "priceFormatted": "$71,852",
-      "change24h": 11.64,
-      "changeFormatted": "+11.64%",
-      "marketCap": 1441340523313.7808,
+      "price": 71939,
+      "priceFormatted": "$71,939",
+      "change24h": 11.82,
+      "changeFormatted": "+11.82%",
+      "marketCap": 1443552894844.2454,
       "sentiment": "BULLISH"
     }
   },
   "crypto": {
     "BTC": {
       "symbol": "BTC",
-      "price": 71852,
-      "priceFormatted": "$71,852",
-      "change24h": 11.64,
-      "changeFormatted": "+11.64%",
-      "marketCap": 1441340523313.7808,
+      "price": 71939,
+      "priceFormatted": "$71,939",
+      "change24h": 11.82,
+      "changeFormatted": "+11.82%",
+      "marketCap": 1443552894844.2454,
       "sentiment": "BULLISH"
     },
     "ETH": {
       "symbol": "ETH",
-      "price": 2288.94,
-      "priceFormatted": "$2,289",
-      "change24h": 19.12,
-      "changeFormatted": "+19.12%",
-      "marketCap": 276103838406.3397,
+      "price": 2285.33,
+      "priceFormatted": "$2,285",
+      "change24h": 19.21,
+      "changeFormatted": "+19.21%",
+      "marketCap": 275668327507.0067,
       "sentiment": "BULLISH"
     },
     "SOL": {
       "symbol": "SOL",
-      "price": 87.64,
-      "priceFormatted": "$87.64",
-      "change24h": 13.3,
-      "changeFormatted": "+13.30%",
-      "marketCap": 51070458345.66755,
+      "price": 87.46,
+      "priceFormatted": "$87.46",
+      "change24h": 13.27,
+      "changeFormatted": "+13.27%",
+      "marketCap": 50988064916.98899,
       "sentiment": "BULLISH"
     },
     "global": {
-      "totalMarketCap": 2453160310094.3535,
+      "totalMarketCap": 2449025060818.6772,
       "totalMarketCapFormatted": "$2.45T",
       "btcDominance": "58.7",
       "ethDominance": "11.2",
-      "marketCapChange24h": "8.21"
+      "marketCapChange24h": "8.43"
     }
   },
   "alerts": [
@@ -80,12 +80,12 @@
       "level": "warning",
       "type": "btc_volatility",
       "title": "High BTC Volatility",
-      "message": "Bitcoin up 11.6% in 24h."
+      "message": "Bitcoin up 11.8% in 24h."
     }
   ],
   "meta": {
-    "timestamp": "2026-08-20T09:20:05.973Z",
-    "updatedAt": "20/08/2026, 06:20:05",
+    "timestamp": "2026-08-20T10:15:40.014Z",
+    "updatedAt": "20/08/2026, 07:15:40",
     "source": "GitHub Actions Cron",
     "nextUpdate": "Every hour",
     "apis": {
