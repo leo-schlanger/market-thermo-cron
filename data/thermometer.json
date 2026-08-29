@@ -1,7 +1,7 @@
 {
   "dashboard": {
     "fearGreed": {
-      "value": 73,
+      "value": 68,
       "classification": "Greed",
       "signal": "NEUTRAL"
     },
@@ -18,67 +18,67 @@
       "source": "FRED"
     },
     "sp500": {
-      "value": 7730.99,
-      "valueFormatted": "$7,731",
+      "value": 7711.76,
+      "valueFormatted": "$7,712",
       "source": "FRED"
     },
     "treasury10y": {
-      "value": 4.66,
-      "valueFormatted": "4.66%",
+      "value": 4.67,
+      "valueFormatted": "4.67%",
       "zone": "ELEVATED",
       "source": "FRED"
     },
     "gold": null,
     "bitcoin": {
       "symbol": "BTC",
-      "price": 77623,
-      "priceFormatted": "$77,623",
-      "change24h": -3.02,
-      "changeFormatted": "-3.02%",
-      "marketCap": 1558396290126.2537,
+      "price": 77594,
+      "priceFormatted": "$77,594",
+      "change24h": -3.06,
+      "changeFormatted": "-3.06%",
+      "marketCap": 1557913766298.7488,
       "sentiment": "BEARISH"
     }
   },
   "crypto": {
     "BTC": {
       "symbol": "BTC",
-      "price": 77623,
-      "priceFormatted": "$77,623",
-      "change24h": -3.02,
-      "changeFormatted": "-3.02%",
-      "marketCap": 1558396290126.2537,
+      "price": 77594,
+      "priceFormatted": "$77,594",
+      "change24h": -3.06,
+      "changeFormatted": "-3.06%",
+      "marketCap": 1557913766298.7488,
       "sentiment": "BEARISH"
     },
     "ETH": {
       "symbol": "ETH",
-      "price": 2436.49,
-      "priceFormatted": "$2,436",
-      "change24h": -2.92,
-      "changeFormatted": "-2.92%",
-      "marketCap": 294038467358.1349,
+      "price": 2437.4,
+      "priceFormatted": "$2,437",
+      "change24h": -2.39,
+      "changeFormatted": "-2.39%",
+      "marketCap": 294193081840.36584,
       "sentiment": "NEUTRAL"
     },
     "SOL": {
       "symbol": "SOL",
-      "price": 103.54,
-      "priceFormatted": "$103.54",
-      "change24h": -4.99,
-      "changeFormatted": "-4.99%",
-      "marketCap": 60486685735.21454,
+      "price": 103.83,
+      "priceFormatted": "$103.83",
+      "change24h": -3.37,
+      "changeFormatted": "-3.37%",
+      "marketCap": 60684576247.85369,
       "sentiment": "BEARISH"
     },
     "global": {
-      "totalMarketCap": 2635737531837.982,
-      "totalMarketCapFormatted": "$2.64T",
+      "totalMarketCap": 2633758310201.3936,
+      "totalMarketCapFormatted": "$2.63T",
       "btcDominance": "59.0",
       "ethDominance": "11.1",
-      "marketCapChange24h": "-5.27"
+      "marketCapChange24h": "-5.54"
     }
   },
   "alerts": [],
   "meta": {
-    "timestamp": "2026-08-28T19:38:02.163Z",
-    "updatedAt": "28/08/2026, 16:38:02",
+    "timestamp": "2026-08-29T02:28:46.627Z",
+    "updatedAt": "28/08/2026, 23:28:46",
     "source": "GitHub Actions Cron",
     "nextUpdate": "Every hour",
     "apis": {
