@@ -1,7 +1,7 @@
 {
   "dashboard": {
     "fearGreed": {
-      "value": 63,
+      "value": 65,
       "classification": "Greed",
       "signal": "NEUTRAL"
     },
@@ -18,8 +18,8 @@
       "source": "FRED"
     },
     "sp500": {
-      "value": 7631.47,
-      "valueFormatted": "$7,631",
+      "value": 7666.6,
+      "valueFormatted": "$7,667",
       "source": "FRED"
     },
     "treasury10y": {
@@ -31,54 +31,54 @@
     "gold": null,
     "bitcoin": {
       "symbol": "BTC",
-      "price": 77125,
-      "priceFormatted": "$77,125",
-      "change24h": -0.38,
-      "changeFormatted": "-0.38%",
-      "marketCap": 1548803089749.5874,
+      "price": 77398,
+      "priceFormatted": "$77,398",
+      "change24h": 0.38,
+      "changeFormatted": "+0.38%",
+      "marketCap": 1553824324884.0298,
       "sentiment": "NEUTRAL"
     }
   },
   "crypto": {
     "BTC": {
       "symbol": "BTC",
-      "price": 77125,
-      "priceFormatted": "$77,125",
-      "change24h": -0.38,
-      "changeFormatted": "-0.38%",
-      "marketCap": 1548803089749.5874,
+      "price": 77398,
+      "priceFormatted": "$77,398",
+      "change24h": 0.38,
+      "changeFormatted": "+0.38%",
+      "marketCap": 1553824324884.0298,
       "sentiment": "NEUTRAL"
     },
     "ETH": {
       "symbol": "ETH",
-      "price": 2383.88,
-      "priceFormatted": "$2,384",
-      "change24h": -1.45,
-      "changeFormatted": "-1.45%",
-      "marketCap": 290924287339.8294,
+      "price": 2390.72,
+      "priceFormatted": "$2,391",
+      "change24h": -0.77,
+      "changeFormatted": "-0.77%",
+      "marketCap": 291649884325.4325,
       "sentiment": "NEUTRAL"
     },
     "SOL": {
       "symbol": "SOL",
-      "price": 99.84,
-      "priceFormatted": "$99.84",
-      "change24h": -0.12,
-      "changeFormatted": "-0.12%",
-      "marketCap": 58428657753.81879,
+      "price": 100.34,
+      "priceFormatted": "$100.34",
+      "change24h": 0.74,
+      "changeFormatted": "+0.74%",
+      "marketCap": 58692490341.23316,
       "sentiment": "NEUTRAL"
     },
     "global": {
-      "totalMarketCap": 2616967400794.6562,
+      "totalMarketCap": 2624119726592.7466,
       "totalMarketCapFormatted": "$2.62T",
       "btcDominance": "59.1",
       "ethDominance": "11.1",
-      "marketCapChange24h": "-2.63"
+      "marketCapChange24h": "-2.32"
     }
   },
   "alerts": [],
   "meta": {
-    "timestamp": "2026-09-02T23:36:58.980Z",
-    "updatedAt": "02/09/2026, 20:36:58",
+    "timestamp": "2026-09-03T01:33:56.556Z",
+    "updatedAt": "02/09/2026, 22:33:56",
     "source": "GitHub Actions Cron",
     "nextUpdate": "Every hour",
     "apis": {
