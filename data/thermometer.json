@@ -23,56 +23,56 @@
       "source": "FRED"
     },
     "treasury10y": {
-      "value": 5.11,
-      "valueFormatted": "5.11%",
+      "value": 5.18,
+      "valueFormatted": "5.18%",
       "zone": "HIGH",
       "source": "FRED"
     },
     "gold": null,
     "bitcoin": {
       "symbol": "BTC",
-      "price": 83826,
-      "priceFormatted": "$83,826",
-      "change24h": -0.13,
-      "changeFormatted": "-0.13%",
-      "marketCap": 1683564957257.2285,
+      "price": 83836,
+      "priceFormatted": "$83,836",
+      "change24h": -0.67,
+      "changeFormatted": "-0.67%",
+      "marketCap": 1684077126310.0352,
       "sentiment": "NEUTRAL"
     }
   },
   "crypto": {
     "BTC": {
       "symbol": "BTC",
-      "price": 83826,
-      "priceFormatted": "$83,826",
-      "change24h": -0.13,
-      "changeFormatted": "-0.13%",
-      "marketCap": 1683564957257.2285,
+      "price": 83836,
+      "priceFormatted": "$83,836",
+      "change24h": -0.67,
+      "changeFormatted": "-0.67%",
+      "marketCap": 1684077126310.0352,
       "sentiment": "NEUTRAL"
     },
     "ETH": {
       "symbol": "ETH",
-      "price": 2687.86,
-      "priceFormatted": "$2,688",
-      "change24h": 0.97,
-      "changeFormatted": "+0.97%",
-      "marketCap": 328021241455.03796,
+      "price": 2681.75,
+      "priceFormatted": "$2,682",
+      "change24h": -0.25,
+      "changeFormatted": "-0.25%",
+      "marketCap": 327355247086.2503,
       "sentiment": "NEUTRAL"
     },
     "SOL": {
       "symbol": "SOL",
-      "price": 121.17,
-      "priceFormatted": "$121.17",
-      "change24h": 4.08,
-      "changeFormatted": "+4.08%",
-      "marketCap": 71203556050.49596,
+      "price": 121.08,
+      "priceFormatted": "$121.08",
+      "change24h": 3.43,
+      "changeFormatted": "+3.43%",
+      "marketCap": 71127505526.91656,
       "sentiment": "BULLISH"
     },
     "global": {
-      "totalMarketCap": 2881913323943.324,
+      "totalMarketCap": 2884253464426.521,
       "totalMarketCapFormatted": "$2.88T",
       "btcDominance": "58.3",
       "ethDominance": "11.3",
-      "marketCapChange24h": "-2.99"
+      "marketCapChange24h": "-2.84"
     }
   },
   "alerts": [
@@ -80,12 +80,12 @@
       "level": "warning",
       "type": "treasury_10y",
       "title": "High Treasury Yield",
-      "message": "10Y Treasury at 5.11%. Risk-off pressure on equities and crypto."
+      "message": "10Y Treasury at 5.18%. Risk-off pressure on equities and crypto."
     }
   ],
   "meta": {
-    "timestamp": "2026-09-25T18:06:26.743Z",
-    "updatedAt": "25/09/2026, 15:06:26",
+    "timestamp": "2026-09-25T21:52:26.101Z",
+    "updatedAt": "25/09/2026, 18:52:26",
     "source": "GitHub Actions Cron",
     "nextUpdate": "Every hour",
     "apis": {
