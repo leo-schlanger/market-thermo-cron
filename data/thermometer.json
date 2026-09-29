@@ -13,8 +13,9 @@
     },
     "dxy": {
       "value": 120.33,
-      "zone": "STRONG",
-      "impact": "Pressures BTC and gold",
+      "zone": "NEUTRAL",
+      "impact": "Neutral",
+      "series": "DTWEXBGS",
       "source": "FRED"
     },
     "sp500": {
@@ -32,11 +33,11 @@
   },
   "crypto": {
     "global": {
-      "totalMarketCap": 2869181072013.882,
-      "totalMarketCapFormatted": "$2.87T",
-      "btcDominance": "58.8",
-      "ethDominance": "11.5",
-      "marketCapChange24h": "-1.26"
+      "totalMarketCap": 2863304342982.5146,
+      "totalMarketCapFormatted": "$2.86T",
+      "btcDominance": "58.3",
+      "ethDominance": "11.4",
+      "marketCapChange24h": "-2.90"
     }
   },
   "alerts": [
@@ -48,8 +49,8 @@
     }
   ],
   "meta": {
-    "timestamp": "2026-09-29T10:56:08.647Z",
-    "updatedAt": "29/09/2026, 07:56:08",
+    "timestamp": "2026-09-29T16:40:26.052Z",
+    "updatedAt": "29/09/2026, 13:40:26",
     "source": "GitHub Actions Cron",
     "nextUpdate": "Every hour",
     "apis": {
