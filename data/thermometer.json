@@ -1,7 +1,7 @@
 {
   "dashboard": {
     "fearGreed": {
-      "value": 74,
+      "value": 73,
       "classification": "Greed",
       "signal": "NEUTRAL"
     },
@@ -18,8 +18,8 @@
       "source": "FRED"
     },
     "sp500": {
-      "value": 7743.41,
-      "valueFormatted": "$7,743",
+      "value": 7683.69,
+      "valueFormatted": "$7,684",
       "source": "FRED"
     },
     "treasury10y": {
@@ -31,48 +31,48 @@
     "gold": null,
     "bitcoin": {
       "symbol": "BTC",
-      "price": 83535,
-      "priceFormatted": "$83,535",
-      "change24h": -1.14,
-      "changeFormatted": "-1.14%",
-      "marketCap": 1678242301409.1157,
+      "price": 83044,
+      "priceFormatted": "$83,044",
+      "change24h": -0.34,
+      "changeFormatted": "-0.34%",
+      "marketCap": 1668426628053.7822,
       "sentiment": "NEUTRAL"
     }
   },
   "crypto": {
     "BTC": {
       "symbol": "BTC",
-      "price": 83535,
-      "priceFormatted": "$83,535",
-      "change24h": -1.14,
-      "changeFormatted": "-1.14%",
-      "marketCap": 1678242301409.1157,
+      "price": 83044,
+      "priceFormatted": "$83,044",
+      "change24h": -0.34,
+      "changeFormatted": "-0.34%",
+      "marketCap": 1668426628053.7822,
       "sentiment": "NEUTRAL"
     },
     "ETH": {
       "symbol": "ETH",
-      "price": 2689.73,
-      "priceFormatted": "$2,690",
-      "change24h": 0.04,
-      "changeFormatted": "+0.04%",
-      "marketCap": 328377484136.50977,
+      "price": 2663.32,
+      "priceFormatted": "$2,663",
+      "change24h": 0.46,
+      "changeFormatted": "+0.46%",
+      "marketCap": 325165559914.6615,
       "sentiment": "NEUTRAL"
     },
     "SOL": {
       "symbol": "SOL",
-      "price": 118.86,
-      "priceFormatted": "$118.86",
-      "change24h": -2.64,
-      "changeFormatted": "-2.64%",
-      "marketCap": 69874656847.35736,
+      "price": 117.43,
+      "priceFormatted": "$117.43",
+      "change24h": -1.79,
+      "changeFormatted": "-1.79%",
+      "marketCap": 69034323462.96008,
       "sentiment": "NEUTRAL"
     },
     "global": {
-      "totalMarketCap": 2875508280416.429,
-      "totalMarketCapFormatted": "$2.88T",
+      "totalMarketCap": 2855309785391.401,
+      "totalMarketCapFormatted": "$2.86T",
       "btcDominance": "58.3",
       "ethDominance": "11.4",
-      "marketCapChange24h": "-2.74"
+      "marketCapChange24h": "-2.46"
     }
   },
   "alerts": [
@@ -84,8 +84,8 @@
     }
   ],
   "meta": {
-    "timestamp": "2026-09-28T23:59:17.141Z",
-    "updatedAt": "28/09/2026, 20:59:17",
+    "timestamp": "2026-09-29T04:10:03.670Z",
+    "updatedAt": "29/09/2026, 01:10:03",
     "source": "GitHub Actions Cron",
     "nextUpdate": "Every hour",
     "apis": {
