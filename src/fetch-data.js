@@ -121,10 +121,16 @@ async function fetchDxy() {
   const value = await fetchFredValue('dxy');
   if (value === null) return FRED_API_KEY ? null : { value: null, source: 'API_KEY_REQUIRED' };
 
+  // DTWEXBGS é o índice AMPLO do dólar (base jan/2006 = 100), ~20 pontos
+  // acima do DXY da ICE. Os limites 100/105 do DXY equivalem a ~118.5/122.5
+  // nesta série (relação histórica: DXY 90 ≈ 111, DXY 112 ≈ 128).
+  const STRONG = 122.5;
+  const WEAK = 118.5;
   return {
     value,
-    zone: value > 105 ? 'STRONG' : value > 100 ? 'NEUTRAL' : 'WEAK',
-    impact: value > 105 ? 'Pressures BTC and gold' : value < 100 ? 'Favors BTC and gold' : 'Neutral',
+    zone: value > STRONG ? 'STRONG' : value >= WEAK ? 'NEUTRAL' : 'WEAK',
+    impact: value > STRONG ? 'Pressures BTC and gold' : value < WEAK ? 'Favors BTC and gold' : 'Neutral',
+    series: 'DTWEXBGS',
     source: 'FRED'
   };
 }
@@ -268,7 +274,7 @@ async function main() {
   console.log(`  Fear & Greed: ${fearGreed?.value ?? 'N/A'} (${fearGreed?.classification ?? 'N/A'})`);
   console.log(`  BTC: ${crypto?.BTC?.priceFormatted ?? 'N/A'} (${crypto?.BTC?.changeFormatted ?? 'N/A'})`);
   console.log(`  VIX: ${vix?.value?.toFixed(1) ?? 'N/A'} (${vix?.zone ?? 'N/A'})`);
-  console.log(`  DXY: ${dxy?.value?.toFixed(2) ?? 'N/A'} (${dxy?.zone ?? 'N/A'})`);
+  console.log(`  USD Broad (DTWEXBGS): ${dxy?.value?.toFixed(2) ?? 'N/A'} (${dxy?.zone ?? 'N/A'})`);
   console.log(`  S&P 500: ${sp500?.valueFormatted ?? 'N/A'}`);
   console.log(`  10Y Treasury: ${treasury10y?.valueFormatted ?? 'N/A'} (${treasury10y?.zone ?? 'N/A'})`);
   console.log(`  Gold: ${gold?.valueFormatted ?? 'N/A'}`);
