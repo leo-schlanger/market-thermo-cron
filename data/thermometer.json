@@ -29,15 +29,51 @@
       "zone": "HIGH",
       "source": "FRED"
     },
-    "gold": null
+    "gold": null,
+    "bitcoin": {
+      "symbol": "BTC",
+      "price": 83351,
+      "priceFormatted": "$83,351",
+      "change24h": -0.07,
+      "changeFormatted": "-0.07%",
+      "marketCap": 1674368288015.5566,
+      "sentiment": "NEUTRAL"
+    }
   },
   "crypto": {
+    "BTC": {
+      "symbol": "BTC",
+      "price": 83351,
+      "priceFormatted": "$83,351",
+      "change24h": -0.07,
+      "changeFormatted": "-0.07%",
+      "marketCap": 1674368288015.5566,
+      "sentiment": "NEUTRAL"
+    },
+    "ETH": {
+      "symbol": "ETH",
+      "price": 2674.14,
+      "priceFormatted": "$2,674",
+      "change24h": -0.07,
+      "changeFormatted": "-0.07%",
+      "marketCap": 326317912527.8575,
+      "sentiment": "NEUTRAL"
+    },
+    "SOL": {
+      "symbol": "SOL",
+      "price": 119.05,
+      "priceFormatted": "$119.05",
+      "change24h": 0.67,
+      "changeFormatted": "+0.67%",
+      "marketCap": 69960646474.7577,
+      "sentiment": "NEUTRAL"
+    },
     "global": {
-      "totalMarketCap": 2866253423350.064,
+      "totalMarketCap": 2865453424315.8643,
       "totalMarketCapFormatted": "$2.87T",
-      "btcDominance": "58.4",
-      "ethDominance": "11.3",
-      "marketCapChange24h": "-2.96"
+      "btcDominance": "58.3",
+      "ethDominance": "11.4",
+      "marketCapChange24h": "-2.40"
     }
   },
   "alerts": [
@@ -49,13 +85,13 @@
     }
   ],
   "meta": {
-    "timestamp": "2026-09-30T00:47:55.397Z",
-    "updatedAt": "29/09/2026, 21:47:55",
+    "timestamp": "2026-09-30T06:03:23.021Z",
+    "updatedAt": "30/09/2026, 03:03:23",
     "source": "GitHub Actions Cron",
     "nextUpdate": "Every hour",
     "apis": {
       "fearGreed": "OK",
-      "coingecko": "ERROR",
+      "coingecko": "OK",
       "fred": "OK"
     }
   }
