@@ -1,7 +1,7 @@
 {
   "dashboard": {
     "fearGreed": {
-      "value": 73,
+      "value": 71,
       "classification": "Greed",
       "signal": "NEUTRAL"
     },
@@ -19,8 +19,8 @@
       "source": "FRED"
     },
     "sp500": {
-      "value": 7683.69,
-      "valueFormatted": "$7,684",
+      "value": 7670.84,
+      "valueFormatted": "$7,671",
       "source": "FRED"
     },
     "treasury10y": {
@@ -33,11 +33,11 @@
   },
   "crypto": {
     "global": {
-      "totalMarketCap": 2875046949387.066,
-      "totalMarketCapFormatted": "$2.88T",
-      "btcDominance": "58.3",
-      "ethDominance": "11.4",
-      "marketCapChange24h": "-2.50"
+      "totalMarketCap": 2866253423350.064,
+      "totalMarketCapFormatted": "$2.87T",
+      "btcDominance": "58.4",
+      "ethDominance": "11.3",
+      "marketCapChange24h": "-2.96"
     }
   },
   "alerts": [
@@ -49,8 +49,8 @@
     }
   ],
   "meta": {
-    "timestamp": "2026-09-29T21:05:43.519Z",
-    "updatedAt": "29/09/2026, 18:05:43",
+    "timestamp": "2026-09-30T00:47:55.397Z",
+    "updatedAt": "29/09/2026, 21:47:55",
     "source": "GitHub Actions Cron",
     "nextUpdate": "Every hour",
     "apis": {
