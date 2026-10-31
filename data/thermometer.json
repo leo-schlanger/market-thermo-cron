@@ -19,8 +19,8 @@
       "source": "FRED"
     },
     "sp500": {
-      "value": 7743.98,
-      "valueFormatted": "$7,744",
+      "value": 7720.39,
+      "valueFormatted": "$7,720",
       "source": "FRED"
     },
     "treasury10y": {
@@ -32,44 +32,44 @@
     "gold": null,
     "bitcoin": {
       "symbol": "BTC",
-      "price": 77577,
-      "priceFormatted": "$77,577",
-      "change24h": 1.6,
-      "changeFormatted": "+1.60%",
-      "marketCap": 1559749719221.505,
+      "price": 77554,
+      "priceFormatted": "$77,554",
+      "change24h": 1.18,
+      "changeFormatted": "+1.18%",
+      "marketCap": 1557749812506.8667,
       "sentiment": "NEUTRAL"
     }
   },
   "crypto": {
     "BTC": {
       "symbol": "BTC",
-      "price": 77577,
-      "priceFormatted": "$77,577",
-      "change24h": 1.6,
-      "changeFormatted": "+1.60%",
-      "marketCap": 1559749719221.505,
+      "price": 77554,
+      "priceFormatted": "$77,554",
+      "change24h": 1.18,
+      "changeFormatted": "+1.18%",
+      "marketCap": 1557749812506.8667,
       "sentiment": "NEUTRAL"
     },
     "ETH": {
       "symbol": "ETH",
-      "price": 2254.06,
-      "priceFormatted": "$2,254",
-      "change24h": 1.21,
-      "changeFormatted": "+1.21%",
-      "marketCap": 275430459811.47504,
+      "price": 2254.96,
+      "priceFormatted": "$2,255",
+      "change24h": 0.72,
+      "changeFormatted": "+0.72%",
+      "marketCap": 275198549018.06146,
       "sentiment": "NEUTRAL"
     },
     "SOL": {
       "symbol": "SOL",
-      "price": 95.96,
-      "priceFormatted": "$95.96",
-      "change24h": 2.02,
-      "changeFormatted": "+2.02%",
-      "marketCap": 56635386439.95566,
+      "price": 95.85,
+      "priceFormatted": "$95.85",
+      "change24h": 0.48,
+      "changeFormatted": "+0.48%",
+      "marketCap": 56509890661.27072,
       "sentiment": "NEUTRAL"
     },
     "global": {
-      "totalMarketCap": 2632293663784.901,
+      "totalMarketCap": 2627229732711.079,
       "totalMarketCapFormatted": "$2.63T",
       "btcDominance": "59.2",
       "ethDominance": "10.5",
@@ -78,8 +78,8 @@
   },
   "alerts": [],
   "meta": {
-    "timestamp": "2026-10-31T18:56:54.515Z",
-    "updatedAt": "31/10/2026, 15:56:54",
+    "timestamp": "2026-10-31T22:03:19.227Z",
+    "updatedAt": "31/10/2026, 19:03:19",
     "source": "GitHub Actions Cron",
     "nextUpdate": "Every hour",
     "apis": {
