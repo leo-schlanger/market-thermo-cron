@@ -24,56 +24,56 @@
       "source": "FRED"
     },
     "treasury10y": {
-      "value": 4.98,
-      "valueFormatted": "4.98%",
-      "zone": "ELEVATED",
+      "value": 5.1,
+      "valueFormatted": "5.10%",
+      "zone": "HIGH",
       "source": "FRED"
     },
     "gold": null,
     "bitcoin": {
       "symbol": "BTC",
-      "price": 68797,
-      "priceFormatted": "$68,797",
-      "change24h": -4.23,
-      "changeFormatted": "-4.23%",
-      "marketCap": 1383354376600.5857,
+      "price": 68229,
+      "priceFormatted": "$68,229",
+      "change24h": -4.41,
+      "changeFormatted": "-4.41%",
+      "marketCap": 1371525807893.761,
       "sentiment": "BEARISH"
     }
   },
   "crypto": {
     "BTC": {
       "symbol": "BTC",
-      "price": 68797,
-      "priceFormatted": "$68,797",
-      "change24h": -4.23,
-      "changeFormatted": "-4.23%",
-      "marketCap": 1383354376600.5857,
+      "price": 68229,
+      "priceFormatted": "$68,229",
+      "change24h": -4.41,
+      "changeFormatted": "-4.41%",
+      "marketCap": 1371525807893.761,
       "sentiment": "BEARISH"
     },
     "ETH": {
       "symbol": "ETH",
-      "price": 1936.15,
-      "priceFormatted": "$1,936",
-      "change24h": -3.93,
-      "changeFormatted": "-3.93%",
-      "marketCap": 236604892667.25406,
+      "price": 1926.69,
+      "priceFormatted": "$1,927",
+      "change24h": -4.53,
+      "changeFormatted": "-4.53%",
+      "marketCap": 235475647364.5104,
       "sentiment": "BEARISH"
     },
     "SOL": {
       "symbol": "SOL",
-      "price": 79.9,
-      "priceFormatted": "$79.90",
-      "change24h": -2.13,
-      "changeFormatted": "-2.13%",
-      "marketCap": 47247144499.03806,
-      "sentiment": "NEUTRAL"
+      "price": 78.06,
+      "priceFormatted": "$78.06",
+      "change24h": -4.43,
+      "changeFormatted": "-4.43%",
+      "marketCap": 46170842905.90592,
+      "sentiment": "BEARISH"
     },
     "global": {
-      "totalMarketCap": 2341470397514.4707,
-      "totalMarketCapFormatted": "$2.34T",
-      "btcDominance": "59.0",
+      "totalMarketCap": 2320389491401.0093,
+      "totalMarketCapFormatted": "$2.32T",
+      "btcDominance": "58.9",
       "ethDominance": "10.1",
-      "marketCapChange24h": "-5.80"
+      "marketCapChange24h": "-6.31"
     }
   },
   "alerts": [
@@ -82,11 +82,17 @@
       "type": "fear_greed",
       "title": "Extreme Fear",
       "message": "Fear & Greed at 20. Historically precedes reversals."
+    },
+    {
+      "level": "warning",
+      "type": "treasury_10y",
+      "title": "High Treasury Yield",
+      "message": "10Y Treasury at 5.10%. Risk-off pressure on equities and crypto."
     }
   ],
   "meta": {
-    "timestamp": "2026-11-13T18:09:34.727Z",
-    "updatedAt": "13/11/2026, 15:09:34",
+    "timestamp": "2026-11-13T23:57:22.769Z",
+    "updatedAt": "13/11/2026, 20:57:22",
     "source": "GitHub Actions Cron",
     "nextUpdate": "Every hour",
     "apis": {
