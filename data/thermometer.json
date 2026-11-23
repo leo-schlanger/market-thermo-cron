@@ -6,9 +6,9 @@
       "signal": "BUY"
     },
     "vix": {
-      "value": 28.44,
-      "zone": "ELEVATED",
-      "signal": "FEAR",
+      "value": 35.89,
+      "zone": "EXTREME",
+      "signal": "PANIC",
       "source": "FRED"
     },
     "dxy": {
@@ -32,48 +32,48 @@
     "gold": null,
     "bitcoin": {
       "symbol": "BTC",
-      "price": 61195,
-      "priceFormatted": "$61,195",
-      "change24h": 3.01,
-      "changeFormatted": "+3.01%",
-      "marketCap": 1230993570351.4604,
+      "price": 63469,
+      "priceFormatted": "$63,469",
+      "change24h": 4.35,
+      "changeFormatted": "+4.35%",
+      "marketCap": 1276272894399.4553,
       "sentiment": "BULLISH"
     }
   },
   "crypto": {
     "BTC": {
       "symbol": "BTC",
-      "price": 61195,
-      "priceFormatted": "$61,195",
-      "change24h": 3.01,
-      "changeFormatted": "+3.01%",
-      "marketCap": 1230993570351.4604,
+      "price": 63469,
+      "priceFormatted": "$63,469",
+      "change24h": 4.35,
+      "changeFormatted": "+4.35%",
+      "marketCap": 1276272894399.4553,
       "sentiment": "BULLISH"
     },
     "ETH": {
       "symbol": "ETH",
-      "price": 1730,
-      "priceFormatted": "$1,730",
-      "change24h": 4.06,
-      "changeFormatted": "+4.06%",
-      "marketCap": 211483921255.91428,
+      "price": 1790.28,
+      "priceFormatted": "$1,790",
+      "change24h": 4.51,
+      "changeFormatted": "+4.51%",
+      "marketCap": 218852587259.89612,
       "sentiment": "BULLISH"
     },
     "SOL": {
       "symbol": "SOL",
-      "price": 71.23,
-      "priceFormatted": "$71.23",
-      "change24h": 2.53,
-      "changeFormatted": "+2.53%",
-      "marketCap": 42170871000.35583,
-      "sentiment": "NEUTRAL"
+      "price": 76.5,
+      "priceFormatted": "$76.50",
+      "change24h": 8.94,
+      "changeFormatted": "+8.94%",
+      "marketCap": 45290925464.151,
+      "sentiment": "BULLISH"
     },
     "global": {
-      "totalMarketCap": 2084080805716.7961,
-      "totalMarketCapFormatted": "$2.08T",
-      "btcDominance": "58.8",
-      "ethDominance": "10.1",
-      "marketCapChange24h": "-1.39"
+      "totalMarketCap": 2176017690288.795,
+      "totalMarketCapFormatted": "$2.18T",
+      "btcDominance": "58.1",
+      "ethDominance": "10.0",
+      "marketCapChange24h": "1.93"
     }
   },
   "alerts": [
@@ -84,6 +84,12 @@
       "message": "Fear & Greed at 11. Historically precedes reversals."
     },
     {
+      "level": "critical",
+      "type": "vix",
+      "title": "Extreme VIX",
+      "message": "VIX at 35.9. Market panic."
+    },
+    {
       "level": "warning",
       "type": "treasury_10y",
       "title": "High Treasury Yield",
@@ -91,8 +97,8 @@
     }
   ],
   "meta": {
-    "timestamp": "2026-11-23T04:07:36.004Z",
-    "updatedAt": "23/11/2026, 01:07:36",
+    "timestamp": "2026-11-23T15:26:58.581Z",
+    "updatedAt": "23/11/2026, 12:26:58",
     "source": "GitHub Actions Cron",
     "nextUpdate": "Every hour",
     "apis": {
