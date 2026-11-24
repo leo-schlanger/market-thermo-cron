@@ -12,68 +12,68 @@
       "source": "FRED"
     },
     "dxy": {
-      "value": 122.6503,
+      "value": 123.5978,
       "zone": "STRONG",
       "impact": "Pressures BTC and gold",
       "series": "DTWEXBGS",
       "source": "FRED"
     },
     "sp500": {
-      "value": 7175.83,
-      "valueFormatted": "$7,176",
+      "value": 6910.39,
+      "valueFormatted": "$6,910",
       "source": "FRED"
     },
     "treasury10y": {
-      "value": 5.04,
-      "valueFormatted": "5.04%",
-      "zone": "HIGH",
+      "value": 4.92,
+      "valueFormatted": "4.92%",
+      "zone": "ELEVATED",
       "source": "FRED"
     },
     "gold": null,
     "bitcoin": {
       "symbol": "BTC",
-      "price": 63469,
-      "priceFormatted": "$63,469",
-      "change24h": 4.35,
-      "changeFormatted": "+4.35%",
-      "marketCap": 1276272894399.4553,
-      "sentiment": "BULLISH"
+      "price": 60517,
+      "priceFormatted": "$60,517",
+      "change24h": -0.33,
+      "changeFormatted": "-0.33%",
+      "marketCap": 1218616748617.926,
+      "sentiment": "NEUTRAL"
     }
   },
   "crypto": {
     "BTC": {
       "symbol": "BTC",
-      "price": 63469,
-      "priceFormatted": "$63,469",
-      "change24h": 4.35,
-      "changeFormatted": "+4.35%",
-      "marketCap": 1276272894399.4553,
-      "sentiment": "BULLISH"
+      "price": 60517,
+      "priceFormatted": "$60,517",
+      "change24h": -0.33,
+      "changeFormatted": "-0.33%",
+      "marketCap": 1218616748617.926,
+      "sentiment": "NEUTRAL"
     },
     "ETH": {
       "symbol": "ETH",
-      "price": 1790.28,
-      "priceFormatted": "$1,790",
-      "change24h": 4.51,
-      "changeFormatted": "+4.51%",
-      "marketCap": 218852587259.89612,
-      "sentiment": "BULLISH"
+      "price": 1695.27,
+      "priceFormatted": "$1,695",
+      "change24h": -0.51,
+      "changeFormatted": "-0.51%",
+      "marketCap": 207278872971.38058,
+      "sentiment": "NEUTRAL"
     },
     "SOL": {
       "symbol": "SOL",
-      "price": 76.5,
-      "priceFormatted": "$76.50",
-      "change24h": 8.94,
-      "changeFormatted": "+8.94%",
-      "marketCap": 45290925464.151,
-      "sentiment": "BULLISH"
+      "price": 71.18,
+      "priceFormatted": "$71.18",
+      "change24h": 1.39,
+      "changeFormatted": "+1.39%",
+      "marketCap": 42164908861.010475,
+      "sentiment": "NEUTRAL"
     },
     "global": {
-      "totalMarketCap": 2176017690288.795,
-      "totalMarketCapFormatted": "$2.18T",
-      "btcDominance": "58.1",
-      "ethDominance": "10.0",
-      "marketCapChange24h": "1.93"
+      "totalMarketCap": 2099891015476.2024,
+      "totalMarketCapFormatted": "$2.10T",
+      "btcDominance": "57.9",
+      "ethDominance": "9.8",
+      "marketCapChange24h": "-1.39"
     }
   },
   "alerts": [
@@ -88,17 +88,11 @@
       "type": "vix",
       "title": "Extreme VIX",
       "message": "VIX at 35.9. Market panic."
-    },
-    {
-      "level": "warning",
-      "type": "treasury_10y",
-      "title": "High Treasury Yield",
-      "message": "10Y Treasury at 5.04%. Risk-off pressure on equities and crypto."
     }
   ],
   "meta": {
-    "timestamp": "2026-11-23T15:26:58.581Z",
-    "updatedAt": "23/11/2026, 12:26:58",
+    "timestamp": "2026-11-24T02:37:11.586Z",
+    "updatedAt": "23/11/2026, 23:37:11",
     "source": "GitHub Actions Cron",
     "nextUpdate": "Every hour",
     "apis": {
